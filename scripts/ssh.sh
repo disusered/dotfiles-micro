@@ -6,25 +6,25 @@
 
 EMAIL="crosquillas@gmail.com"
 
-# Start SSH service
+echo "Start SSH service"
 sudo systemctl enable sshd.service --now
 
-# Create a new SSH key if it doesn't exist
 if [ ! -f ~/.ssh/id_ed25519 ]; then
+  echo "Create SSH key with ed25519 algorithm"
   ssh-keygen -t ed25519 -C "$EMAIL" -N "" -C "GitHub Key" -f ~/.ssh/id_ed25519
 fi
 
-# Set permissions on SSH directory
+echo "Set permissions on SSH directory"
 chmod 755 ~/.ssh
 
-# Create an authorized_keys file
+echo "Create or touch authorized_keys file"
 touch ~/.ssh/authorized_keys
 
-# Set permissions on authorized_keys file
+echo "Set permissions on authorized_keys file"
 chmod 644 ~/.ssh/authorized_keys
 
-# Start SSH Agent in background
+echo "Start SSH Agent"
 eval "$(ssh-agent -s)"
 
-# Add SSH key to SSH Agent
+echo "Add SSH key to SSH Agent"
 ssh-add ~/.ssh/id_ed25519
