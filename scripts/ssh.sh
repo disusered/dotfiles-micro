@@ -1,7 +1,11 @@
 #!/bin/bash
 
 # Install OpenSSH Server
-sudo dnf install -y openssh-server
+if [ -f /etc/redhat-release ]; then
+  sudo dnf install -y openssh-server
+elif [ -f /etc/lsb-release ]; then
+  sudo apt-get install -y openssh-server
+fi
 
 # Start SSH service
 sudo systemctl enable sshd.service --now
