@@ -4,8 +4,8 @@ ROOT="${HOME}/.dotfiles/scripts"
 
 case $(uname) in
   'Linux')
-    source $ROOT/dependencies
-    source $ROOT/ssh
+    source $ROOT/dependencies.sh
+    source $ROOT/ssh.sh
     ;;
   'Darwin')
     # TODO
