@@ -9,8 +9,10 @@ EMAIL="crosquillas@gmail.com"
 # Start SSH service
 sudo systemctl enable sshd.service --now
 
-# Create a new SSH key
-ssh-keygen -t ed25519 -C "$EMAIL" -N "" -C "GitHub Key" -f ~/.ssh/id_ed25519
+# Create a new SSH key if it doesn't exist
+if [ ! -f ~/.ssh/id_ed25519 ]; then
+  ssh-keygen -t ed25519 -C "$EMAIL" -N "" -C "GitHub Key" -f ~/.ssh/id_ed25519
+fi
 
 # Set permissions on SSH directory
 chmod 755 ~/.ssh
