@@ -6,7 +6,7 @@
 
 EMAIL="crosquillas@gmail.com"
 
-echo "Start SSH service"
+log "Start SSH service"
 sudo systemctl enable sshd.service --now
 
 if [ ! -f ~/.ssh/id_ed25519 ]; then
@@ -14,17 +14,17 @@ if [ ! -f ~/.ssh/id_ed25519 ]; then
   ssh-keygen -t ed25519 -C "$EMAIL" -N "" -C "GitHub Key" -f ~/.ssh/id_ed25519
 fi
 
-echo "Set permissions on SSH directory"
+log "Set permissions on SSH directory"
 chmod 755 ~/.ssh
 
-echo "Create or touch authorized_keys file"
+log "Create or touch authorized_keys file"
 touch ~/.ssh/authorized_keys
 
-echo "Set permissions on authorized_keys file"
+log "Set permissions on authorized_keys file"
 chmod 644 ~/.ssh/authorized_keys
 
-echo "Start SSH Agent"
+log "Start SSH Agent"
 eval "$(ssh-agent -s)"
 
-echo "Add SSH key to SSH Agent"
+log "Add SSH key to SSH Agent"
 ssh-add ~/.ssh/id_ed25519
