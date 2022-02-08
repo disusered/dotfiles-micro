@@ -12,16 +12,18 @@ sudo systemctl enable sshd.service --now
 if [ ! -f ~/.ssh/id_ed25519 ]; then
   echo "Create SSH key with ed25519 algorithm"
   ssh-keygen -t ed25519 -C "$EMAIL" -N "" -C "GitHub Key" -f ~/.ssh/id_ed25519
+
+  log "Set permissions on SSH directory"
+  chmod 755 ~/.ssh
 fi
 
-log "Set permissions on SSH directory"
-chmod 755 ~/.ssh
+if [ ! -f ~/.ssh/authorized_keys ]; then
+  log "Create or touch authorized_keys file"
+  touch ~/.ssh/authorized_keys
 
-log "Create or touch authorized_keys file"
-touch ~/.ssh/authorized_keys
-
-log "Set permissions on authorized_keys file"
-chmod 644 ~/.ssh/authorized_keys
+  log "Set permissions on authorized_keys file"
+  chmod 644 ~/.ssh/authorized_keys
+fi
 
 log "Start SSH Agent"
 eval "$(ssh-agent -s)"
