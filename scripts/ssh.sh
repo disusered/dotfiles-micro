@@ -8,6 +8,7 @@ EMAIL="crosquillas@gmail.com"
 
 log "Start SSH service"
 sudo systemctl enable sshd.service --now
+systemctl status sshd.service --lines 0
 
 if [ ! -f ~/.ssh/id_ed25519 ]; then
   echo "Create SSH key with ed25519 algorithm"
