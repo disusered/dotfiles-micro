@@ -1,17 +1,16 @@
 #!/bin/bash
 
-# Install OpenSSH Server
-if [ -f /etc/redhat-release ]; then
-  sudo dnf install -y openssh-server
-elif [ -f /etc/lsb-release ]; then
-  sudo apt-get install -y openssh-server
-fi
+# Sources
+# https://docs.fedoraproject.org/en-US/Fedora/14/html/Deployment_Guide/s2-ssh-configuration-keypairs.html
+# https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+EMAIL="crosquillas@gmail.com"
 
 # Start SSH service
 sudo systemctl enable sshd.service --now
 
-# Create SSH directory
-mkdir -p ~/.ssh
+# Create a new SSH key
+ssh-keygen -t ed25519 -C "$EMAIL"
 
 # Set permissions on SSH directory
 chmod 755 ~/.ssh
