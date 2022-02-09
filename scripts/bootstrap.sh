@@ -16,6 +16,9 @@ case $(uname) in
     # Symlink configs with stow
     source $ROOT/symlinks.sh
 
+    # Manual symlinks
+    source $ROOT/greenclip.sh
+
     # Custom configuration scripts
     source $ROOT/shell.sh
     source $ROOT/ssh.sh
