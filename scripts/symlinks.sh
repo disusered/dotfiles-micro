@@ -1,6 +1,8 @@
 #!/bin/bash
 
-cd "$HOME/.dotfiles/configs" || exit
+# https://www.gnu.org/software/stow/manual/html_node/Invoking-Stow.html
+
+STOW_DIR="~/.dotfiles/configs"
 
 log "Installing dotfiles"
-stow git
+stow -d ~/.dotfiles/ -R git
