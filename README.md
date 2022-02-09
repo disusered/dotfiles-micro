@@ -16,18 +16,22 @@
   cat ~/.ssh/id_ed25519.pub
   ```
 
-3. Configure Keybase[^2]
+3. Configure Keybase and save the key in GitHub[^2]
+  ```sh
+  # List keys
+  gpg --list-secret-keys --keyid-format LONG
+  
+  # Export key
+  gpg --armor --export <My_PGP_Key>
+  ```
 
 4. Add GPG key to `~/.gitconfig`[^3]
-```sh
-# List keys
-gpg --list-secret-keys --keyid-format LONG
-
-# Export key
-gpg --armor --export <My_PGP_Key>
-
-# Save key in Github
-```
+  ```sh
+  # List keys
+  gpg --list-secret-keys --keyid-format LONG
+  
+  # First entry after sec, can be confirmed in the Keybase app
+  ```
 
 
 ## Sources
