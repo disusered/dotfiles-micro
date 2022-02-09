@@ -1,0 +1,90 @@
+[user]
+	name = Carlos Rosquillas
+	email = crosquillas@gmail.com
+	signingkey = REPLACE_SIGNING_KEY
+[advice]
+	statusHints = true
+[color]
+	ui = true
+	status = always
+[core]
+	quotepath = false
+	excludesfile = ~/.gitignore_global
+	editor = nvim
+	autocrlf = input
+	trustctime = false
+[pager]
+	diff = delta
+	log = delta
+	reflog = delta
+	show = delta
+; [include]
+; 	path = "~/.dotfiles/vendor/delta/themes.gitconfig"
+[delta]
+	side-by-side = true
+	; syntax-theme = base16-256
+	navigate = true
+[interactive]
+	diffFilter = delta --color-only
+[pretty]
+	basic = %C(magenta bold)%h%C(reset) %C(auto)%d%C(reset) %s
+	extended = %C(magenta bold)%h%C(reset)  %C(blue bold)%aN%C(reset) %C(auto)%d%C(reset) %s %C(8)(%cr)%C(reset)
+	reflog = %C(magenta bold)%h%C(reset)  %C(blue bold)%gd%C(reset) %gs %C(8)(%cr)%C(reset)
+[alias]
+	l = log --graph --color --pretty=extended --abbrev-commit --date=relative --branches --remotes --tags --oneline --decorate
+	s = status --short --branch
+	b = branch
+	bc = checkout -b
+	c = commit --verbose
+	ca = commit --verbose --amend
+	cm = commit --message
+	g = grep --break --heading --line-number
+	a = add
+	p = push
+	pf = push --force
+	d = diff --no-ext-diff
+	dt = difftool
+	m = merge
+	mt = mergetool
+	f = fetch
+	fm = pull
+	co = checkout
+[grep]
+	lineNumber = true
+[diff]
+	tool = fugitive
+	indentHeuristic = true
+	submodule = log
+[merge]
+	tool = fugitive
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
+[mergetool "fugitive"]
+	cmd = nvim -f -c \"Gdiff\" \"$MERGED\"
+[difftool "vimdiff"]
+	cmd = nvim -d -u ~/.nvimrc \"$LOCAL\" \"$REMOTE\"
+[branch]
+	autosetuprebase = always
+[submodule]
+	fetchJobs = 0
+[rerere]
+	enabled = true
+[cola]
+	spellcheck = true
+[status]
+	submoduleSummary = true
+[url "git@bitbucket.org:"]
+	insteadOf = https://bitbucket.org/
+[commit]
+	gpgsign = true
+[gpg]
+	program = /usr/bin/gpg
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

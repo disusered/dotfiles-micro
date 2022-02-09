@@ -1,0 +1,10 @@
+*~
+.DS_Store
+.local-vimrc
+Session.vim
+*.py.orig
+requests.sh
+swatch*
+*.ropeproject
+*.pgsql
+*.vscode
