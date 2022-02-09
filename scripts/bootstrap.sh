@@ -11,6 +11,7 @@ case $(uname) in
   'Linux')
     source $ROOT/dependencies.sh
     source $ROOT/ssh.sh
+    source $ROOT/keybase.sh
     ;;
   'Darwin')
     # TODO
