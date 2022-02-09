@@ -9,9 +9,15 @@ log() {
 
 case $(uname) in
   'Linux')
+    # Install Linux dependencies
     source $ROOT/dependencies.sh
     source $ROOT/keybase.sh
+
+    # Symlink configs with stow
     source $ROOT/symlinks.sh
+
+    # Custom configuration scripts
+    source $ROOT/shell.sh
     source $ROOT/ssh.sh
     ;;
   'Darwin')
