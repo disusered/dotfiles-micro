@@ -19,5 +19,6 @@ if ! [ -x "$(command -v keybase)" ]; then
     fi
     sudo apt install -y /tmp/keybase.deb
   fi
-
+else
+  log "Keybase is already installed"
 fi

@@ -16,6 +16,8 @@ if [ ! -f ~/.ssh/id_ed25519 ]; then
 
   log "Setting permissions on SSH directory"
   chmod 755 ~/.ssh
+else
+  log "SSH key with ed25519 algorithm already exists"
 fi
 
 if [ ! -f ~/.ssh/authorized_keys ]; then
@@ -24,6 +26,8 @@ if [ ! -f ~/.ssh/authorized_keys ]; then
 
   log "Setting permissions on authorized_keys file"
   chmod 644 ~/.ssh/authorized_keys
+else
+  log "authorized_keys file already exists"
 fi
 
 log "Starting SSH Agent"
