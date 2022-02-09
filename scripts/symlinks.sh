@@ -5,4 +5,4 @@
 STOW_DIR="~/.dotfiles/configs"
 
 log "Installing dotfiles"
-stow -d ~/.dotfiles/ -R git
+stow -d ~/.dotfiles/ -R git .local

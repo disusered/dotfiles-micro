@@ -13,11 +13,11 @@ case $(uname) in
     source $ROOT/dependencies.sh
     source $ROOT/keybase.sh
 
+    # Install manual dependencies
+    source $ROOT/greenclip.sh
+
     # Symlink configs with stow
     source $ROOT/symlinks.sh
-
-    # Manual symlinks
-    source $ROOT/greenclip.sh
 
     # Custom configuration scripts
     source $ROOT/shell.sh
