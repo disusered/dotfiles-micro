@@ -1,7 +1,7 @@
 [user]
 	name = Carlos Rosquillas
 	email = crosquillas@gmail.com
-	signingkey = REPLACE_SIGNING_KEY
+	signingkey = AAE5C2AEA9340F06
 [advice]
 	statusHints = true
 [color]
