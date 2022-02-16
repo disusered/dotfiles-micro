@@ -1,0 +1,27 @@
+if [ "$OS" == "mac" ]; then
+  # Add to $PATH variable
+  path=(
+    $path
+  )
+
+  # Add to ZSH function paths
+  fpath=(
+    $fpath
+  )
+if [ "$OS" == "linux" ]; then
+  # Add to $PATH variable
+  path=(
+    $path
+  )
+
+  # Add to ZSH function paths per distro
+  if [ "$DISTRO" == "redhat" ]; then
+    fpath=(
+      $fpath
+    )
+  elif [ "$DISTRO" == "ubuntu" ]; then
+    fpath=(
+      $fpath
+    )
+  fi
+fi
