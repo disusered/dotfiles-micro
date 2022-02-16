@@ -5,13 +5,13 @@
 if ! [ -x "$(command -v keybase)" ]; then
   log "Installing keybase"
 
-  if [ -f /etc/redhat-release ]; then
+  if [ "$DISTRO" == "redhat" ]; then
     if [ $(getconf LONG_BIT) = "64" ]; then
       sudo yum install https://prerelease.keybase.io/keybase_amd64.rpm
     else
       sudo yum install https://prerelease.keybase.io/keybase_i386.rpm
     fi
-  elif [ -f /etc/lsb-release ]; then
+  elif [ "$DISTRO" == "ubuntu" ]; then
     if [ $(getconf LONG_BIT) = "64" ]; then
       curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb -o /tmp/keybase.deb
     else
