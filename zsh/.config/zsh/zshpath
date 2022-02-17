@@ -8,7 +8,7 @@ if [ "$OS" == "mac" ]; then
   fpath=(
     $fpath
   )
-if [ "$OS" == "linux" ]; then
+elif [ "$OS" == "linux" ]; then
   # Add to $PATH variable
   path=(
     $path
