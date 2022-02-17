@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VERSION="v4.2"
-GREENCLIP_BIN="~/.dotfiles/.local/bin/greenclip"
+GREENCLIP_BIN="~/.dotfiles/bin/greenclip"
 
 # If greenclip file doesn't exist, download it
 if [ ! -f $GREENCLIP_SYMLINK ]; then
