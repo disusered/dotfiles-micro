@@ -11,9 +11,9 @@ log() {
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   # Install Linux dependencies
   source $ROOT/dependencies.sh
-  source $ROOT/keybase.sh
 
   # Install manual dependencies
+  source $ROOT/keybase.sh
   source $ROOT/greenclip.sh
 
   # Symlink configs with stow
