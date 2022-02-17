@@ -1,3 +1,9 @@
+# Set path
+source $HOME/.config/zsh/zshpath
+
+# Load custom functions
+source $HOME/.config/zsh/zshfuns
+
 # History options
 SAVEHIST=10000
 HISTSIZE=10000
