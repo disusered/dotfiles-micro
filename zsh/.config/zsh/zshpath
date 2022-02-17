@@ -1,4 +1,4 @@
-if [ "$OS" == "mac" ]; then
+if [ "$(uname)" == 'Darwin' ]; then
   # Add to $PATH variable
   path=(
     $path
@@ -8,18 +8,18 @@ if [ "$OS" == "mac" ]; then
   fpath=(
     $fpath
   )
-elif [ "$OS" == "linux" ]; then
+elif [ "$(uname)" == 'Linux' ]; then
   # Add to $PATH variable
   path=(
     $path
   )
 
   # Add to ZSH function paths per distro
-  if [ "$DISTRO" == "redhat" ]; then
+  if [ -f /etc/redhat-release ]; then
     fpath=(
       $fpath
     )
-  elif [ "$DISTRO" == "ubuntu" ]; then
+  elif [ -f /etc/lsb-release ]; then
     fpath=(
       $fpath
     )

@@ -25,16 +25,3 @@ export LESS='-X -F -g -i -M -R -S -w -z-4'
 export GIT_LOG_STYLE_BASIC="%C(magenta bold)%h%C(reset) %C(auto)%d%C(reset) %s"
 export GIT_LOG_STYLE_COMPLEX="%C(magenta bold)%h%C(reset) %C(blue bold)%aN%C(reset) %C(auto)%d%C(reset) %s %C(8)(%cr)%C(reset)"
 export GIT_LOG_STYLE=$GIT_LOG_STYLE_COMPLEX
-
-# Set environment variables with distro and OS
-if [ -f /etc/redhat-release ]; then
-  export DISTRO="redhat"
-elif [ -f /etc/lsb-release ]; then
-  export DISTRO="ubuntu"
-fi
-
-if [ "$(uname)" == 'Darwin' ]; then
-  export OS="mac"
-elif [ "$(uname)" == 'Linux' ]; then
-  export OS="linux"
-fi
