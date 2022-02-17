@@ -15,3 +15,9 @@ setopt HIST_BEEP
 
 # Disable globbing with git
 alias git='noglob git'
+
+# Enable vim mode
+bindkey -v
+
+# History substring search with Ctrl-R
+bindkey '^R' history-incremental-search-backward
