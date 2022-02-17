@@ -1,4 +1,4 @@
-if [ "$(uname)" == 'Darwin' ]; then
+if [[ "$OSTYPE" == "darwin"* ]]; then
   # Add to $PATH variable
   path=(
     $path
@@ -8,7 +8,7 @@ if [ "$(uname)" == 'Darwin' ]; then
   fpath=(
     $fpath
   )
-elif [ "$(uname)" == 'Linux' ]; then
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
   # Add to $PATH variable
   path=(
     $path

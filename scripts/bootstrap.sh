@@ -8,11 +8,7 @@ log() {
   echo -e "\033[1;32m[+]\033[0m $1"
 }
 
-# Bootstap the system
-# TODO
-# if [ "$(uname)" == 'Darwin' ]; then
-  # source $ROOT/macos
-if [ "$(uname)" == 'Linux' ]; then
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   # Install Linux dependencies
   source $ROOT/dependencies.sh
   source $ROOT/keybase.sh
