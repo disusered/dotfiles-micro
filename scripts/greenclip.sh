@@ -7,4 +7,4 @@ GREENCLIP_BIN="$HOME/bin/greenclip"
 if [ ! -f $GREENCLIP_BIN ]; then
   echo "Installing Greenclip for Rofi"
   wget https://github.com/erebe/greenclip/releases/download/${VERSION}/greenclip $GREENCLIP_BIN
-end
+fi
