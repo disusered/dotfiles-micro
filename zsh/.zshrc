@@ -41,6 +41,14 @@ bindkey '^[[B' history-substring-search-down
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
+# Delete key
+bindkey '^[[3~' delete-char
+bindkey -M vicmd '^[[3~' delete-char
+
+# Undo/Redo
+bindkey -M vicmd 'u' undo
+bindkey -M vicmd '^R' redo
+
 # Autoload module completion
 autoload -Uz compinit
 for dump in ~/.zcompdump(N.mh+24); do
