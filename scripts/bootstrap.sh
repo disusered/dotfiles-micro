@@ -21,5 +21,6 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 
   # Custom configuration scripts
   source $ROOT/shell.sh
+  source $ROOT/tmux.sh
   source $ROOT/ssh.sh
 fi
