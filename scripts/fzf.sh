@@ -13,5 +13,11 @@ fi
 # Install FZF command is not already installed
 if ! [ -x "$(command -v fzf)" ]; then
   log "Installing FZF"
-  ~/.fzf/install
+
+  # Install to XDG_CONFIG_HOME if available
+  if [ -d "$XDG_CONFIG_HOME" ]; then
+    ~/.fzf/install --xdg --all --no-bash --no-fish --no-zsh
+  else
+    ~/.fzf/install --all --no-bash --no-fish --no-zsh
+  fi
 fi

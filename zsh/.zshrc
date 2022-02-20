@@ -49,6 +49,19 @@ bindkey -M vicmd '^[[3~' delete-char
 bindkey -M vicmd 'u' undo
 bindkey -M vicmd '^R' redo
 
+# Paste in vim mode with p
+case $(uname) in
+  'Linux')
+    vi-append-x-selection () { RBUFFER=$(xsel -o --clipboard </dev/null)$RBUFFER; }
+    zle -N vi-append-x-selection
+    bindkey -a 'p' vi-append-x-selection
+  ;;
+esac
+
+# Load FZF plugin for zsh, if available on XDG else use $HOME
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Autoload module completion
 autoload -Uz compinit
 for dump in ~/.zcompdump(N.mh+24); do
