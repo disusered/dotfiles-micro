@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # https://keybase.io/docs/the_app/install_linux
 # https://www.garrickadenbuie.com/blog/signed-verified-git-commits-keybase-rstudio/
 
