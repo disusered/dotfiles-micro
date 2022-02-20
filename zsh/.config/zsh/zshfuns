@@ -155,7 +155,7 @@ function _completemarks {
   reply=($(ls $MARKPATH))
 }
 function selectmark {
-  URI="$(marks | cat | f | awk '{print $1}')"
+  URI="$(marks | cat | fzf-tmux | awk '{print $1}')"
   cd -P "$MARKPATH/$URI" 2>/dev/null || echo "No such mark: $URI"
 }
 compctl -K _completemarks jump

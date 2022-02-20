@@ -15,12 +15,11 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   # Install manual dependencies
   source $ROOT/keybase.sh
   source $ROOT/greenclip.sh
-
-  # Symlink configs with stow
-  source $ROOT/symlinks.sh
-
-  # Custom configuration scripts
   source $ROOT/shell.sh
   source $ROOT/tmux.sh
   source $ROOT/ssh.sh
+  source $ROOT/fzf.sh
+
+  # Symlink configs with stow
+  source $ROOT/symlinks.sh
 fi
