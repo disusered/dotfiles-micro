@@ -1,3 +1,6 @@
+# Initialize zinit/zplugin
+source "${ZINIT_HOME}/zinit.zsh"
+
 # History options
 SAVEHIST=10000
 HISTSIZE=10000

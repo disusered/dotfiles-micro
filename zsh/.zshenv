@@ -25,3 +25,6 @@ export LESS='-X -F -g -i -M -R -S -w -z-4'
 export GIT_LOG_STYLE_BASIC="%C(magenta bold)%h%C(reset) %C(auto)%d%C(reset) %s"
 export GIT_LOG_STYLE_COMPLEX="%C(magenta bold)%h%C(reset) %C(blue bold)%aN%C(reset) %C(auto)%d%C(reset) %s %C(8)(%cr)%C(reset)"
 export GIT_LOG_STYLE=$GIT_LOG_STYLE_COMPLEX
+
+# Zinit configuration
+export ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
