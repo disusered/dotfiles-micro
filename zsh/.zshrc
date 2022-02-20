@@ -40,3 +40,14 @@ bindkey '^[[B' history-substring-search-down
 
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
+
+# Autoload module completion
+autoload -Uz compinit
+for dump in ~/.zcompdump(N.mh+24); do
+  compinit
+done
+compinit -C
+autoload -U +X bashcompinit && bashcompinit
+
+# Enable profiling
+# zprof
