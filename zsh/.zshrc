@@ -13,8 +13,8 @@ setopt HIST_SAVE_NO_DUPS
 setopt HIST_VERIFY
 setopt HIST_BEEP
 
-# Disable globbing with git
-alias git='noglob git'
+# Load custom alias
+source $HOME/.config/zsh/zshalias
 
 # Enable vim mode
 bindkey -v

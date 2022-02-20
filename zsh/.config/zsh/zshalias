@@ -1,0 +1,48 @@
+# Disable globbing with git
+alias git='noglob git'
+
+# Tmux attach alias
+alias ta='tmux attach -t'
+
+# Clear the screen
+alias c='clear'
+
+# Ranger file explorer
+alias r='ranger'
+
+# Jump to directory
+alias j="selectmark"
+
+# Analyze directory sizes
+alias used='ncdu'
+
+# Text search in file content
+alias ag='ag --hidden --pager "less -R" --color-line-number 1\;35 --color-path 1\;37 --color-match 7\;34'
+
+# HTTPie for HTTP requests
+alias http='http --style vim'
+
+# Git aliases
+alias g='git'
+alias gl="gli"
+alias gcp='git cherry-pick'
+alias gs='git status --short --branch'
+alias gb='git branch'
+alias gbc='git checkout -b'
+alias gc='git commit --verbose'
+alias gca='git commit --verbose --amend'
+alias gcm='git commit --message'
+alias ga='git add'
+alias gp='git push'
+alias gpf='git push --force'
+alias gd='git diff --no-ext-diff'
+alias gdt='git difftool'
+alias gm='git merge'
+alias gmt='git mergetool'
+alias gf='git fetch'
+alias gfm='git pull'
+alias gr='git reset'
+alias gco='git checkout'
+
+# Debug colors in tmux
+alias colors='( x=`tput op` y=`printf %$((${COLUMNS}-6))s`;for i in {0..256};do o=00$i;echo -e ${o:${#o}-3:3} `tput setaf $i;tput setab $i`${y// /=}$x;done; )'

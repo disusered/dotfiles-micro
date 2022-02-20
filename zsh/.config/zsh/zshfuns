@@ -107,3 +107,56 @@ function detect-clipboard() {
 # (for example, perhaps the user has now installed xclip) and then either print an error
 # or proceed successfully.
 detect-clipboard || true
+
+# Git Log Interactive
+# https://gist.github.com/junegunn/f4fca918e937e6bf5bad
+gli() {
+  local out shas sha q k
+  while out=$(
+      git l --format=$GIT_LOG_STYLE $1 |
+      fzf --ansi --no-sort --reverse --multi --query="$q" \
+          --print-query --expect=ctrl-d,ctrl-c,ctrl-i,ctrl-r --toggle-sort=\`); do
+    q=$(head -1 <<< "$out")
+    k=$(head -2 <<< "$out" | tail -1)
+    shas=$(sed '1,2d;s/^[^a-z0-9]*//;/^$/d' <<< "$out" | awk '{print $1}')
+    [ -z "$shas" ] && continue
+    if [ "$k" = ctrl-d ]; then
+      nvim fugitive://$(git rev-parse --show-toplevel)/.git//$(git rev-parse $shas)
+    elif [ "$k" = ctrl-i ]; then
+      git rebase --interactive $shas
+      break
+    elif [ "$k" = ctrl-c ]; then
+      echo $shas | tr -d '\n' | clipcopy
+      break
+    elif [ "$k" = ctrl-r ]; then
+      git reset --hard $shas
+    else
+      for sha in $shas; do
+        git show --color=always $sha
+      done
+    fi
+  done
+}
+
+# Marks
+function jump {
+  cd -P "$MARKPATH/$1" 2>/dev/null || echo "No such mark: $1"
+}
+function mark {
+  mkdir -p "$MARKPATH"; ln -s "$(pwd)" "$MARKPATH/$1"
+}
+function unmark {
+  rm -i "$MARKPATH/$1"
+}
+function marks {
+  \ls -l "$MARKPATH" | tail -n +2 | sed 's/  / /g' | cut -d' ' -f9- | awk -F ' -> ' '{printf "%-10s -> %s\n", $1, $2}'
+}
+function _completemarks {
+  reply=($(ls $MARKPATH))
+}
+function selectmark {
+  URI="$(marks | cat | f | awk '{print $1}')"
+  cd -P "$MARKPATH/$URI" 2>/dev/null || echo "No such mark: $URI"
+}
+compctl -K _completemarks jump
+compctl -K _completemarks unmark
