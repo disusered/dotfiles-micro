@@ -12,6 +12,7 @@ sed -e 's/^screen[^|]*|[^,]*,/screen-it|screen with italics support,/' \
   >| /tmp/xterm.terminfo
 
 # Compile and create binary file ~/.terminfo/[number]/xterm-256color
+log "Compiling terminfo file"
 tic /tmp/xterm.terminfo
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
@@ -20,4 +21,11 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   if [ -d "$SHADA_DIR" ]; then
     rm -rf $SHADA_DIR
   fi
+fi
+
+# if tpm is not installed, install it
+TMUX_DIR="$HOME/.tmux"
+if ! [ -x "$(command -v tpm)" ]; then
+  echo "Installing tpm for tmux"
+  git clone https://github.com/tmux-plugins/tpm $TMUX_DIR/plugins/tpm
 fi
