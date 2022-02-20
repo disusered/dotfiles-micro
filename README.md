@@ -33,6 +33,10 @@
   # First entry after sec, can be confirmed in the Keybase app
   ```
 
+## TODO
+
+- Download Git Delta themes and configure in `.gitconfig`
+- Neovim
 
 ## Sources
 
