@@ -17,4 +17,4 @@ the_silver_searcher
 lazygit
 luarocks
 python3-pip
-@development-tools
+g++
