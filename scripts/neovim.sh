@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# if packer.nvim hasn't been cloned, clone it otherwise update
+# If packer.nvim hasn't been cloned, clone it otherwise update
 if [ ! -d ~/.config/nvim/pack/plugins/start/packer.nvim ]; then
   log "Cloning packer.nvim"
   git clone --depth 1 https://github.com/wbthomason/packer.nvim \
@@ -9,3 +9,14 @@ else
   log "Updating packer.nvim"
   cd ~/.local/share/nvim/site/pack/packer/start/packer.nvim && git pull
 fi
+
+# Install Python dependencies for Neovim
+case $(uname) in
+  'Darwin')
+    # TODO
+    ;;
+  'Linux')
+    sudo pip3 install --upgrade setuptools pip
+    pip3 install --user --upgrade pynvim neovim-remote virtualenv virtualenvwrapper hererocks
+    ;;
+esac

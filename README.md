@@ -38,7 +38,8 @@
 - Download Git Delta themes and configure in `.gitconfig`
 - Neovim
 - Volta/Node
-- Volta in base.lua
+- Volta in `base.lua`
+- Darwin python in `neovim.sh`
 
 ## Sources
 
