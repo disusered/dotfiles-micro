@@ -58,8 +58,11 @@ return packer.startup(function(use)
   -- Colorize hex/rgba/hsla codes
   use 'norcalli/nvim-colorizer.lua'
 
+  -- TreeSitter integration
+  use { 'nvim-treesitter/nvim-treesitter' }
+
   -- Allow commenting current line, visual selection or motion
-  use {'b3nj5m1n/kommentary', requires = {'JoosepAlviste/nvim-ts-context-commentstring'}}
+  use {'JoosepAlviste/nvim-ts-context-commentstring', requires = {'b3nj5m1n/kommentary'}}
 
   -- EasyMotion-like movement
   -- use 'justinmk/vim-sneak'
@@ -96,9 +99,6 @@ return packer.startup(function(use)
 
   -- Git support
   use 'tpope/vim-fugitive'
-
-  -- TreeSitter integration
-  use { 'nvim-treesitter/nvim-treesitter' }
 
   -- Improved match with %
   use {'andymass/vim-matchup', event = 'VimEnter'}
