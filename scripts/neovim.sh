@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # If packer.nvim hasn't been cloned, clone it otherwise update
-if [ ! -d ~/.config/nvim/pack/plugins/start/packer.nvim ]; then
+if [ ! -d ~/.local/share/nvim/site/pack/packer/start/packer.nvim ]; then
   log "Cloning packer.nvim"
   git clone --depth 1 https://github.com/wbthomason/packer.nvim \
    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
