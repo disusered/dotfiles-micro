@@ -35,10 +35,10 @@
 
 ## TODO
 
-- Download Git Delta themes and configure in `.gitconfig`
-- Neovim
-- Volta/Node
+- Volta to Darwin path
 - Volta in `base.lua`
+- Download Git Delta themes and configure in `.gitconfig`
+- Neovim LSP
 - Darwin python in `neovim.sh`
 - Use patched font in Linux terminal
 - Configure LSPs
@@ -46,7 +46,7 @@
 - kitty paste in `linux.conf`
 - https://github.com/ryanoasis/nerd-fonts#option-3-install-script
 - i3/sway
-- dunst
+- dunst/mako
 
 ## Sources
 

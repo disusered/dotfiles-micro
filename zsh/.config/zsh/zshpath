@@ -11,6 +11,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
   # Add to $PATH variable
   path=(
+    $VOLTA_HOME/bin
     $path
   )
 
