@@ -1,0 +1,11 @@
+.git
+*.so
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.map
+*.po
+*.pot
+*.mo
+package-lock.json
