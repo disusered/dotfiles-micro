@@ -5,4 +5,4 @@
 STOW_DIR="~/.dotfiles/configs"
 
 log "Installing dotfiles"
-stow -d ~/.dotfiles/ -R bins git zsh tmux neovim
+stow -d ~/.dotfiles/ -R bins git zsh tmux neovim ag
