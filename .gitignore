@@ -1,1 +1,3 @@
 bins/bin/*
+tmux-client-*
+neovim/.config/nvim/plugin/
