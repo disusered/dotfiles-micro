@@ -6,8 +6,7 @@ else
 end
 
 -- Set Node host from Volta
--- TODO: Fix in projects, maybe use system node
--- vim.g.node_host_prog = os.execute('volta which neovim-node-host')
+vim.g.node_host_prog = os.execute('volta which neovim-node-host')
 
 -- Use system clipboard as default depending on platform
 vim.g.clipboard_type = 'unnamed'

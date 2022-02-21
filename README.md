@@ -35,8 +35,6 @@
 
 ## TODO
 
-- Volta to Darwin path
-- Volta in `base.lua`
 - Download Git Delta themes and configure in `.gitconfig`
 - Neovim LSP
 - Darwin python in `neovim.sh`
@@ -47,6 +45,7 @@
 - https://github.com/ryanoasis/nerd-fonts#option-3-install-script
 - i3/sway
 - dunst/mako
+- darwin everything
 
 ## Sources
 
