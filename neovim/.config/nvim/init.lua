@@ -30,6 +30,7 @@ require("config.snippets")
 require("config.dadbod")
 require("config.vimtex")
 require("config.vsnip")
+require("config.nvim-lsp-installer")
 
 -- Useful keymaps
 require('maps')

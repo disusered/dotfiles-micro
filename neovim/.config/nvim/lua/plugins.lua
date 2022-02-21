@@ -95,7 +95,10 @@ return packer.startup(function(use)
   use 'tpope/vim-eunuch'
 
   -- LSP
-  use { 'neovim/nvim-lspconfig' }
+  use {
+    'neovim/nvim-lspconfig',
+    'williamboman/nvim-lsp-installer',
+  }
 
   -- Git support
   use 'tpope/vim-fugitive'
