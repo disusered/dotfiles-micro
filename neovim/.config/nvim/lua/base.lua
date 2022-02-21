@@ -10,7 +10,7 @@ end
 vim.g.node_host_prog = os.execute('volta which neovim-node-host | tr -d "\n"')
 
 -- Use system clipboard as default depending on platform
-vim.g.clipboard_type = 'unnamed'
+vim.opt.clipboard = 'unnamedplus'
 
 -- Enable live search and replace
 vim.o.inccommand = 'split'

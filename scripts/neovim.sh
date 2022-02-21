@@ -22,6 +22,6 @@ case $(uname) in
 esac
 
 
-# TODO: Install neovim dependencies
+# Neovim dependencies
 volta install neovim tree-sitter
 cargo install tree-sitter-cli

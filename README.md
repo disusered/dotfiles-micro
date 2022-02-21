@@ -35,17 +35,16 @@
 
 ## TODO
 
-- Download Git Delta themes and configure in `.gitconfig`
 - Neovim LSP
-- Darwin python in `neovim.sh`
 - Neovim dependencies in `neovim.sh`
-- Use patched font in Linux terminal
 - Configure LSPs
 - Rofi/Greenclip
+- Use patched font in kitty
+  - https://github.com/ryanoasis/nerd-fonts#option-3-install-script
 - kitty paste in `linux.conf`
-- https://github.com/ryanoasis/nerd-fonts#option-3-install-script
 - i3/sway
 - dunst/mako
+- Download Git Delta themes and configure in `.gitconfig`
 - darwin everything
 - vimtext neovim checkhealth
 - perl/ruby neovim checkhealth

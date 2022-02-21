@@ -50,13 +50,9 @@ bindkey -M vicmd 'u' undo
 bindkey -M vicmd '^R' redo
 
 # Paste in vim mode with p
-case $(uname) in
-  'Linux')
-    vi-append-x-selection () { RBUFFER=$(xsel -o --clipboard </dev/null)$RBUFFER; }
+    vi-append-x-selection () { RBUFFER=$(clippaste </dev/null)$RBUFFER; }
     zle -N vi-append-x-selection
     bindkey -a 'p' vi-append-x-selection
-  ;;
-esac
 
 # Load FZF plugin for zsh, if available on XDG else use $HOME
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh
