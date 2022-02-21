@@ -37,6 +37,8 @@
 
 - Download Git Delta themes and configure in `.gitconfig`
 - Neovim
+- Volta/Node
+- Volta in base.lua
 
 ## Sources
 
