@@ -1,34 +1,11 @@
-! Options
-URxvt*scrollTtyKeypress: true
-! URxvt*fading: 15
-! URxvt*tintColor: #b48ead
-URxvt*scrollBar:  false
-
 ! Fonts
 Xft.antialias: 1
 Xft.autohint:  0
-Xft.dpi:       96
+Xft.dpi:       141
 Xft.hinting:   1
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 Xft.rgba:      rgb
-
-URxvt.font: xft:Source Code Pro:pixelsize=13,\
-            xft:SauceCodePro Nerd Font Mono:pixelsize=13,\
-            xft:Noto Color Emoji:pixelsize=13, \
-            Unifont
-
-! Extensions
-URxvt.perl-ext-common: default,osc-xterm-clipboard
-
-! URxvt.letterSpace: 0
-
-!Disables the insanely annoying Ctrl+Shift shortcut that enters ISO14755 mode
-URxvt.iso14755:             false
-
-! Pasting with autokey-gtk does not work without this:
-URxvt.inputMethod: ibus
-URxvt.preeditType: OverTheSpot
 
 ! Colors
 *foreground:    #3c3836
@@ -43,38 +20,3 @@ rofi.color-urgent: #2b303b, #bf616a, #2b303b, #bf616a, #2b303b
 rofi.color-active: #2b303b, #8fa1b3, #2b303b, #8fa1b3, #2b303b
 !                  'bg',    'border'
 rofi.color-window: #2b303b, #eff1f5
-
-! Base16 Ocean
-! Scheme: Chris Kempson (http://chriskempson.com)
-
-URxvt*background:                     #2b303b
-URxvt*foreground:                     #c0c5ce
-URxvt*cursorColor:                    #c0c5ce
-
-URxvt*scrollColor:                    #c0c5ce
-URxvt*highlightColor:                 #4f5b66
-URxvt*highlightTextColor:             #a7adba
-
-URxvt*color0:                         #2b303b
-URxvt*color1:                         #bf616a
-URxvt*color2:                         #a3be8c
-URxvt*color3:                         #ebcb8b
-URxvt*color4:                         #8fa1b3
-URxvt*color5:                         #b48ead
-URxvt*color6:                         #96b5b4
-URxvt*color7:                         #c0c5ce
-URxvt*color8:                         #65737e
-URxvt*color9:                         #bf616a
-URxvt*color10:                        #a3be8c
-URxvt*color11:                        #ebcb8b
-URxvt*color12:                        #8fa1b3
-URxvt*color13:                        #b48ead
-URxvt*color14:                        #96b5b4
-URxvt*color15:                        #eff1f5
-
-URxvt*color16:                        #d08770
-URxvt*color17:                        #ab7967
-URxvt*color18:                        #343d46
-URxvt*color19:                        #4f5b66
-URxvt*color20:                        #a7adba
-URxvt*color21:                        #dfe1e8

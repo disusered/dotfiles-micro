@@ -13,6 +13,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   source $ROOT/dependencies.sh
 
   # Install manual dependencies
+  source $ROOT/fonts.sh
   source $ROOT/rust.sh
   source $ROOT/keybase.sh
   source $ROOT/greenclip.sh

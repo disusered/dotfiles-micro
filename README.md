@@ -43,8 +43,9 @@
 - Use patched font in Linux terminal
 - Configure LSPs
 - Rofi/Greenclip
-- rxvt-unicode
-- i3
+- kitty paste in `linux.conf`
+- https://github.com/ryanoasis/nerd-fonts#option-3-install-script
+- i3/sway
 - dunst
 
 ## Sources

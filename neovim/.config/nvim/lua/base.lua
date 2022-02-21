@@ -10,11 +10,7 @@ end
 -- vim.g.node_host_prog = os.execute('volta which neovim-node-host')
 
 -- Use system clipboard as default depending on platform
-if vim.fn.has('macunix') then
-  vim.g.clipboard_type = 'unnamed'
-else
-  vim.g.clipboard_type = 'unix'
-end
+vim.g.clipboard_type = 'unnamed'
 
 -- Enable live search and replace
 vim.o.inccommand = 'split'
