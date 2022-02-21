@@ -6,6 +6,11 @@ if [ -f /etc/redhat-release ]; then
   # development tools
   sudo dnf groupinstall "Development Tools" "Development Libraries" -y
 
+  # docker
+  # https://docs.docker.com/engine/install/fedora/
+  sudo dnf config-manager --add-repo \
+    https://download.docker.com/linux/fedora/docker-ce.repo
+
   # additional sources
   sudo dnf copr enable atim/lazygit -y
 

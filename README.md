@@ -33,6 +33,8 @@
   # First entry after sec, can be confirmed in the Keybase app
   ```
 
+4. Activate GitHub Copilot in Neovim with `:Copilot`
+
 ## TODO
 
 - Neovim LSP

@@ -21,6 +21,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   source $ROOT/shell.sh
   source $ROOT/tmux.sh
   source $ROOT/ssh.sh
+  source $ROOT/docker.sh
   source $ROOT/fzf.sh
   source $ROOT/neovim.sh
 

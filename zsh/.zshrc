@@ -1,6 +1,9 @@
 # Initialize zinit/zplugin
 source "${ZINIT_HOME}/zinit.zsh"
 
+# Load custom functions
+source $HOME/.config/zsh/zshfuns
+
 # plugins
 zplugin light zsh-users/zsh-history-substring-search
 zplugin light zdharma/fast-syntax-highlighting
