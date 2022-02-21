@@ -98,16 +98,13 @@ return packer.startup(function(use)
   use 'tpope/vim-fugitive'
 
   -- TreeSitter integration
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate',
-    requires = {
-      -- Improved match with %
-      {'andymass/vim-matchup', event = 'VimEnter'},
-      -- Automatically close tags using TreeSitter
-      {'windwp/nvim-ts-autotag'}
-    }
-  }
+  use { 'nvim-treesitter/nvim-treesitter' }
+
+  -- Improved match with %
+  use {'andymass/vim-matchup', event = 'VimEnter'}
+
+  -- Automatically close tags using TreeSitter
+  use { 'windwp/nvim-ts-autotag' }
 
   -- File browsing
   use 'jeetsukumaran/vim-filebeagle'

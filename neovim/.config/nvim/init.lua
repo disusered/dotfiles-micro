@@ -19,6 +19,7 @@ require("config.lualine")
 require("config.snap")
 require("config.tokyonight")
 require("config.treesitter")
+require("config.nvim-ts-autotag")
 require("config.whichkey")
 require("config.hop")
 require("config.trouble")
@@ -31,4 +32,4 @@ require("config.vimtex")
 require("config.vsnip")
 
 -- Useful keymaps
--- require('maps')
+require('maps')
