@@ -20,3 +20,8 @@ case $(uname) in
     pip3 install --user --upgrade pynvim neovim-remote virtualenv virtualenvwrapper hererocks
     ;;
 esac
+
+
+# TODO: Install neovim dependencies
+volta install neovim tree-sitter
+cargo install tree-sitter-cli

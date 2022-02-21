@@ -26,6 +26,3 @@ if [ ! -f ~/.volta/bin/yarn ]; then
   VOLTA_HOME="$HOME/.volta"
   $VOLTA_HOME/bin/volta install yarn
 fi
-
-# Install Neovim dependencies
-npm i -g neovim

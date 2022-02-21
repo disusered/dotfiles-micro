@@ -38,6 +38,7 @@
 - Download Git Delta themes and configure in `.gitconfig`
 - Neovim LSP
 - Darwin python in `neovim.sh`
+- Neovim dependencies in `neovim.sh`
 - Use patched font in Linux terminal
 - Configure LSPs
 - Rofi/Greenclip
@@ -46,6 +47,8 @@
 - i3/sway
 - dunst/mako
 - darwin everything
+- vimtext neovim checkhealth
+- perl/ruby neovim checkhealth
 
 ## Sources
 
