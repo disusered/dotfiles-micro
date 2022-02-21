@@ -41,6 +41,7 @@
 - Volta in `base.lua`
 - Darwin python in `neovim.sh`
 - Use patched font in Linux terminal
+- Configure LSPs
 
 ## Sources
 
