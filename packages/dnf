@@ -19,3 +19,5 @@ luarocks
 python3-pip
 g++
 ripgrep
+rxvt-unicode
+xrdb

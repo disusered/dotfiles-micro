@@ -42,6 +42,10 @@
 - Darwin python in `neovim.sh`
 - Use patched font in Linux terminal
 - Configure LSPs
+- Rofi/Greenclip
+- rxvt-unicode
+- i3
+- dunst
 
 ## Sources
 
