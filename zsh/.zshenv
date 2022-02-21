@@ -32,3 +32,6 @@ export FZF_DEFAULT_OPTS='--layout=reverse --color hl:2,hl+:2,fg:8,fg+:15,bg+:0,i
 
 # Zinit configuration
 export ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+
+# Cargo
+. "$HOME/.cargo/env"
