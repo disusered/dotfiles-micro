@@ -15,14 +15,9 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     $path
   )
 
-  # Add to ZSH function paths per distro
-  if [ -f /etc/redhat-release ]; then
-    fpath=(
-      $fpath
-    )
-  elif [ -f /etc/lsb-release ]; then
-    fpath=(
-      $fpath
-    )
-  fi
+  # Add to ZSH function paths
+  fpath=(
+    "${XDG_DATA_HOME:-${HOME}/.local/share}/zsh/completions"
+    $fpath
+  )
 fi

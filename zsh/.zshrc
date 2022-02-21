@@ -61,13 +61,16 @@ bindkey -M vicmd '^R' redo
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# completions
+zinit wait lucid atload"zicompinit; zicdreplay" blockf for \
+  zsh-users/zsh-completions
+
 # Autoload module completion
 autoload -Uz compinit
-for dump in ~/.zcompdump(N.mh+24); do
-  compinit
-done
-compinit -C
-autoload -U +X bashcompinit && bashcompinit
+compinit
+
+autoload -U +X bashcompinit
+bashcompinit
 
 # Enable profiling
 # zprof

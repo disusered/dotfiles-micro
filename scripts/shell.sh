@@ -21,3 +21,8 @@ if [[ ! -d "$ZINIT_HOME" ]]; then
   mkdir -p "$(dirname $ZINIT_HOME)"
   git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
+
+# Create local completions directory if it doesn't exist
+if [[ ! -d "${XDG_DATA_HOME:-${HOME}/.local/share}/zsh/completions" ]]; then
+  mkdir -p "${XDG_DATA_HOME:-${HOME}/.local/share}/zsh/completions"
+fi
