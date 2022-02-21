@@ -19,6 +19,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   source $ROOT/tmux.sh
   source $ROOT/ssh.sh
   source $ROOT/fzf.sh
+  source $ROOT/neovim.sh
 
   # Symlink configs with stow
   source $ROOT/symlinks.sh

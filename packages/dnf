@@ -15,3 +15,5 @@ util-linux-user
 ncdu
 the_silver_searcher
 lazygit
+luarocks
+python3-pip
