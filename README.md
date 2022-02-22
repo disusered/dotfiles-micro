@@ -50,18 +50,18 @@
   - [x] "vimls",
   - [x] "vuels",
   - [x] "yamlls",
-- Configure snippets
+- [x] Configure snippets
 - Neovim dependencies in `neovim.sh`
-- Rofi/Greenclip
 - Use patched font in kitty
   - https://github.com/ryanoasis/nerd-fonts#option-3-install-script
 - kitty paste in `linux.conf`
+- vimtext neovim checkhealth
+- perl/ruby neovim checkhealth
+- Rofi/Greenclip
 - i3/sway
 - dunst/mako
 - Download Git Delta themes and configure in `.gitconfig`
 - darwin everything
-- vimtext neovim checkhealth
-- perl/ruby neovim checkhealth
 
 ## Sources
 

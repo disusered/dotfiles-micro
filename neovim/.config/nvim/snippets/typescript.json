@@ -1,0 +1,12 @@
+{
+  "jsdocParam": {
+    "prefix": "jdp",
+    "body": "@param ${1:title} - ${2:The title of the book}",
+    "description": "JSDoc param"
+  },
+  "jsdocReturn": {
+    "prefix": "jdr",
+    "body": "@returns ${0:The ID of the book with the given title}",
+    "description": "JSDoc return"
+  }
+}
