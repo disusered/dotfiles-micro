@@ -38,18 +38,19 @@
 ## TODO
 
 - Configure LSPs
-  - [ ] "bashls",
-  - [ ] "cssls",
-  - [ ] "diagnosticls",
-  - [ ] "dockerls",
-  - [ ] "html",
+  - [x] "bashls",
+  - [x] "cssls",
+  - [x] "diagnosticls",
+  - [x] "dockerls",
+  - [x] "html",
   - [x] "jsonls",
-  - [ ] "sumneko_lua",
-  - [ ] "tailwindcss",
-  - [ ] "tsserver",
-  - [ ] "vimls",
-  - [ ] "vuels",
-  - [ ] "yamlls",
+  - [x] "sumneko_lua",
+  - [x] "tailwindcss",
+  - [x] "tsserver",
+  - [x] "vimls",
+  - [x] "vuels",
+  - [x] "yamlls",
+- Configure snippets
 - Neovim dependencies in `neovim.sh`
 - Rofi/Greenclip
 - Use patched font in kitty

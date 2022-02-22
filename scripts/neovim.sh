@@ -23,5 +23,5 @@ esac
 
 
 # Neovim dependencies
-volta install neovim tree-sitter
+volta install neovim tree-sitter prettier prettier-eslint eslint eslintd
 cargo install tree-sitter-cli
