@@ -35,3 +35,32 @@ for _, name in pairs(servers) do
     server:install()
   end
 end
+
+local function on_attach(client, bufnr)
+  -- Register keymaps
+  require'config.nvim-lsp-maps'(client, bufnr)
+
+  -- Attach LSP signature plugin and config
+  require'config.nvim-lsp-signature'()
+
+    -- Attach LSP kind plugin and config
+  require'config.nvim-lsp-kind'()
+end
+
+local enhance_server_opts = {
+  -- Provide settings that should only apply to a particular server
+}
+
+lsp_installer.on_server_ready(function(server)
+  -- Specify the default options which we'll use to setup all servers
+  local opts = {
+    on_attach = on_attach,
+  }
+
+  if enhance_server_opts[server.name] then
+    -- Enhance the default opts with the server-specific ones
+    enhance_server_opts[server.name](opts)
+  end
+
+  server:setup(opts)
+end)

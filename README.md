@@ -37,9 +37,20 @@
 
 ## TODO
 
-- Neovim LSP
-- Neovim dependencies in `neovim.sh`
 - Configure LSPs
+  - [ ] "bashls",
+  - [ ] "cssls",
+  - [ ] "diagnosticls",
+  - [ ] "dockerls",
+  - [ ] "html",
+  - [x] "jsonls",
+  - [ ] "sumneko_lua",
+  - [ ] "tailwindcss",
+  - [ ] "tsserver",
+  - [ ] "vimls",
+  - [ ] "vuels",
+  - [ ] "yamlls",
+- Neovim dependencies in `neovim.sh`
 - Rofi/Greenclip
 - Use patched font in kitty
   - https://github.com/ryanoasis/nerd-fonts#option-3-install-script

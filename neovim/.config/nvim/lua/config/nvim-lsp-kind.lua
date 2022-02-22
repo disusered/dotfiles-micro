@@ -1,8 +1,7 @@
 local lsp_kind_init = function()
   require('lspkind').init({
-    -- enables text annotations
-    -- default: true
-    with_text = true,
+    -- options: 'text', 'text_symbol', 'symbol_text', 'symbol'
+    mode = 'symbol_text',
 
     -- default symbol map
     -- can be either 'default' or
