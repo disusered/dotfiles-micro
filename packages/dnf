@@ -29,3 +29,16 @@ docker-ce-cli
 containerd.io
 telnet
 watchman
+zathura
+texlive-scheme-basic
+texlive-setspace
+texlive-hyperref
+texlive-tucv
+texlive-lipsum
+texlive-dirtytalk
+texlive-latexindent
+texlive-chktex
+latexmk
+'perl(File::HomeDir)'
+'perl(YAML::Tiny)'
+'perl(Unicode::GCString)'
