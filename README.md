@@ -37,7 +37,7 @@
 
 ## TODO
 
-- Configure LSPs
+- [x] Configure LSPs
   - [x] "bashls",
   - [x] "cssls",
   - [x] "diagnosticls",
@@ -51,17 +51,22 @@
   - [x] "vuels",
   - [x] "yamlls",
 - [x] Configure snippets
-- Neovim dependencies in `neovim.sh`
-- Use patched font in kitty
-  - https://github.com/ryanoasis/nerd-fonts#option-3-install-script
-- kitty paste in `linux.conf`
-- vimtext neovim checkhealth
-- perl/ruby neovim checkhealth
-- Rofi/Greenclip
-- i3/sway
-- dunst/mako
-- Download Git Delta themes and configure in `.gitconfig`
-- darwin everything
+- [ ] Neovim dependencies in `neovim.sh`
+- [ ] Use patched font in kitty
+  - [x] https://github.com/ryanoasis/nerd-fonts#option-3-install-script
+  - [x] Install Sauce Code Pro
+  - [ ] Use Sauce Code Pro glyphs
+  - [ ] Install Codicons
+  - [ ] Use Codicon glyphs in lspkind
+    - [ ] https://github.com/onsails/lspkind-nvim/issues/6
+- [x] kitty paste in `linux.conf`
+- [ ] vimtext neovim checkhealth
+- [ ] perl/ruby neovim checkhealth
+- [ ] Rofi/Greenclip?
+- [ ] i3/sway
+- [ ] dunst/mako
+- [ ] Download Git Delta themes and configure in `.gitconfig`
+- [ ] darwin everything
 
 ## Sources
 
