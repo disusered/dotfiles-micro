@@ -34,7 +34,7 @@ G('mkdp_open_ip', '')
 -- function! g:Open_browser(url)
 --   silent exe 'silent !open -a --Google Chrome Canary-- ' . a:url
 -- endfunction
-G('mkdp_browser', 'Google Chrome Canary')
+-- G('mkdp_browser', 'Google Chrome Canary')
 
 -- set to 1, echo preview page url in command line when open preview page
 -- default is 0
