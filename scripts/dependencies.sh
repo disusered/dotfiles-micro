@@ -11,6 +11,11 @@ if [ -f /etc/redhat-release ]; then
   sudo dnf config-manager --add-repo \
     https://download.docker.com/linux/fedora/docker-ce.repo
 
+  # github cli
+  # https://github.com/cli/cli/blob/trunk/docs/install_linux.md
+  sudo dnf config-manager --add-repo \
+    https://cli.github.com/packages/rpm/gh-cli.repo
+
   # additional sources
   sudo dnf copr enable atim/lazygit -y
 

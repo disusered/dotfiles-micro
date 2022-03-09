@@ -42,3 +42,4 @@ latexmk
 'perl(File::HomeDir)'
 'perl(YAML::Tiny)'
 'perl(Unicode::GCString)'
+gh
