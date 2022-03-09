@@ -26,6 +26,7 @@ wl-clipboard
 dnf-plugins-core
 docker-ce
 docker-ce-cli
+docker-compose
 containerd.io
 telnet
 watchman

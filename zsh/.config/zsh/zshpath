@@ -12,6 +12,7 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
   # Add to $PATH variable
   path=(
     $VOLTA_HOME/bin
+    "${XDG_DATA_HOME:-${HOME}/.local}/bin"
     $path
   )
 
