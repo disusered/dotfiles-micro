@@ -26,6 +26,8 @@ local servers = {
   "vimls",
   "vuels",
   "yamlls",
+  "jedi_language_server",
+  "pyright",
 }
 
 for _, name in pairs(servers) do
