@@ -44,3 +44,9 @@ latexmk
 'perl(YAML::Tiny)'
 'perl(Unicode::GCString)'
 gh
+terraform
+libxcrypt-compat.x86_64
+google-cloud-cli
+google-cloud-sdk-terraform-validator
+packer
+graphviz
