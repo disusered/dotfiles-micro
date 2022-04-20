@@ -117,14 +117,20 @@ return packer.startup(function(use)
 
   -- Completion
   use {
-    'hrsh7th/nvim-compe',
-    requires = {
-      { 'hrsh7th/vim-vsnip' },
-      { 'hrsh7th/vim-vsnip-integ' },
-      { 'rafamadriz/friendly-snippets' },
-      { 'ray-x/lsp_signature.nvim' },
-      { 'onsails/lspkind-nvim' }
-    }
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-cmdline',
+    'hrsh7th/nvim-cmp',
+    'ray-x/lsp_signature.nvim',
+    'onsails/lspkind-nvim',
+  }
+
+  -- Snippets
+  use {
+    'hrsh7th/cmp-vsnip',
+    'hrsh7th/vim-vsnip',
+    'rafamadriz/friendly-snippets',
   }
 
   -- Diagnostics

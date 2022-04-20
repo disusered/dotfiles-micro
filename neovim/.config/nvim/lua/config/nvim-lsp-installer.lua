@@ -40,17 +40,14 @@ end
 
 local function on_attach(client, bufnr)
   -- Enable snippetSupport in capabilities
-  local capabilities = vim.lsp.protocol.make_client_capabilities()
+  local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
   capabilities.textDocument.completion.completionItem.snippetSupport = true
 
   -- Register keymaps
-  require'config.nvim-lsp-maps'(client, bufnr)
+  require 'config.nvim-lsp-maps' (client, bufnr)
 
   -- Attach LSP signature plugin and config
-  require'config.nvim-lsp-signature'()
-
-    -- Attach LSP kind plugin and config
-  require'config.nvim-lsp-kind'()
+  require 'config.nvim-lsp-signature' ()
 end
 
 local enhance_server_opts = {
@@ -100,9 +97,9 @@ local enhance_server_opts = {
   -- DiagnosticLS for Prettier
   ["diagnosticls"] = function(opts)
     local formatters = {
-      eslint = {command="eslint", args = { "--fix", "--stdin-filename", "%filepath"}},
-      prettier = {command = "prettier", args = {"--stdin-filepath", "%filepath"}},
-      prettierts = {command = "prettier", args = {"--parser", "typescript", "--stdin-filepath", "%filepath"}}
+      eslint = { command = "eslint", args = { "--fix", "--stdin-filename", "%filepath" } },
+      prettier = { command = "prettier", args = { "--stdin-filepath", "%filepath" } },
+      prettierts = { command = "prettier", args = { "--parser", "typescript", "--stdin-filepath", "%filepath" } }
     }
 
     local filetypes = {
@@ -118,7 +115,7 @@ local enhance_server_opts = {
 
     opts.filetypes = vim.tbl_keys(filetypes)
 
-    opts.init_options =  {
+    opts.init_options = {
       -- https://jose-elias-alvarez.medium.com/configuring-neovims-lsp-client-for-typescript-development-5789d58ea9c
       formatters = formatters,
       formatFiletypes = filetypes
@@ -131,7 +128,7 @@ local enhance_server_opts = {
       Lua = {
         diagnostics = {
           -- Get the language server to recognize the `vim` global
-          globals = {'vim'},
+          globals = { 'vim' },
         },
         workspace = {
           -- Make the server aware of Neovim runtime files
@@ -146,7 +143,7 @@ local enhance_server_opts = {
   end,
 
   ["eslint"] = function(opts)
-    opts.on_attach = function (client, bufnr)
+    opts.on_attach = function(client, bufnr)
       -- neovim's LSP client does not currently support dynamic capabilities registration, so we need to set
       -- the resolved capabilities of the eslint server ourselves!
       client.resolved_capabilities.document_formatting = true
