@@ -31,6 +31,7 @@ require("config.vimtex")
 require("config.vsnip")
 require("config.lspconfig")
 require("config.nvim-lsp-installer")
+require("config.copilot")
 
 -- Useful keymaps
 require('maps')
