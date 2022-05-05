@@ -1,8 +1,42 @@
 -- https://github.com/nvim-treesitter/nvim-treesitter
 
 require 'nvim-treesitter.configs'.setup {
-  -- One of "all", "maintained" (parsers with maintainers), or a list of languages
-  ensure_installed = 'maintained',
+  -- https://github.com/nvim-treesitter/nvim-treesitter/issues/2293#issuecomment-1094250553
+  ensure_installed = {
+    'bash',
+    -- 'comment',
+    'css',
+    'dockerfile',
+    'eex',
+    'elixir',
+    'go',
+    'graphql',
+    'hcl',
+    -- 'help',
+    'html',
+    -- 'http',
+    -- 'java',
+    'javascript',
+    'jsdoc',
+    'json',
+    'json5',
+    'latex',
+    'lua',
+    'make',
+    'php',
+    'phpdoc',
+    'python',
+    -- 'regex',
+    'ruby',
+    'rust',
+    'scss',
+    'toml',
+    'tsx',
+    'typescript',
+    'vim',
+    'vue',
+    'yaml',
+  },
 
   -- List of parsers to ignore installing
   ignore_install = {},
