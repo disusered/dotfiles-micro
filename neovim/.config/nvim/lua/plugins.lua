@@ -90,7 +90,6 @@ return packer.startup(function(use)
   -----------------------------------------------------------------------------
   -- IDE plugins
   -----------------------------------------------------------------------------
-
   -- Adds Unix file manipulation :Commands
   use 'tpope/vim-eunuch'
 
@@ -140,6 +139,7 @@ return packer.startup(function(use)
   use {
     'lewis6991/gitsigns.nvim',
     requires = { 'nvim-lua/plenary.nvim' },
+
     tag = 'release'
   }
 
