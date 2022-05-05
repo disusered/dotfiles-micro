@@ -19,6 +19,14 @@ if [ -f /etc/redhat-release ]; then
   sudo dnf config-manager --add-repo \
     https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
 
+  # vagrant
+  sudo dnf config-manager --add-repo \
+    https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
+
+  # virtualbox
+  sudo dnf config-manager --add-repo \
+    https://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
+
   # gcloud
   # https://cloud.google.com/sdk/docs/install
   sudo tee -a /etc/yum.repos.d/google-cloud-sdk.repo << EOM

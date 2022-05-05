@@ -50,3 +50,7 @@ google-cloud-cli
 google-cloud-sdk-terraform-validator
 packer
 graphviz
+podman
+snapd
+vagrant
+VirtualBox-6.1.x86_64
