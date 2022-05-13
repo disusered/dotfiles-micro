@@ -1,0 +1,13 @@
+#!/bin/bash
+
+SERVER_URL=127.0.0.1:8000
+USER_EMAIL=crosquillas@gmail.com
+USER_PASS=
+
+# Auth
+http POST $SERVER_URL/rest-auth/login/ "email=$USER_EMAIL" "password=$USER_PASS"
+
+AUTH_HEADER="Authorization: Token 1814987bb81d320c2575c7c77cfde1558784019e"
+
+# Locations
+http GET $SERVER_URL/api/v2/locations/ $AUTH_HEADER
