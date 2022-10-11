@@ -36,6 +36,7 @@ require 'nvim-treesitter.configs'.setup {
     'vim',
     'vue',
     'yaml',
+    'svelte',
   },
 
   -- List of parsers to ignore installing
