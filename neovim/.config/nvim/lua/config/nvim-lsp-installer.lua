@@ -28,6 +28,10 @@ local servers = {
   "yamlls",
   "jedi_language_server",
   "pyright",
+  "psalm",
+  "intelephense",
+  "phpactor",
+  "svelte",
 }
 
 for _, name in pairs(servers) do
@@ -99,7 +103,8 @@ local enhance_server_opts = {
     local formatters = {
       eslint = { command = "eslint", args = { "--fix", "--stdin-filename", "%filepath" } },
       prettier = { command = "prettier", args = { "--stdin-filepath", "%filepath" } },
-      prettierts = { command = "prettier", args = { "--parser", "typescript", "--stdin-filepath", "%filepath" } }
+      prettierts = { command = "prettier", args = { "--parser", "typescript", "--stdin-filepath", "%filepath" } },
+      prettierphp = { command = "prettier", args = { "--plugin",  "@prettier/plugin-php", "--parser", "php", "--phpVersion", "7.4", "--tab-width", "2", "--stdin-filepath", "%filepath" } }
     }
 
     local filetypes = {
@@ -111,6 +116,7 @@ local enhance_server_opts = {
       javascriptreact = "prettier",
       typescript = "prettier",
       typescriptreact = "prettier",
+      php = "prettierphp"
     }
 
     opts.filetypes = vim.tbl_keys(filetypes)
