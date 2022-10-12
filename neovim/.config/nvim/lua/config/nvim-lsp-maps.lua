@@ -23,9 +23,9 @@ local attach_keymaps = function(client, bufnr)
 
   -- Set format keybinds conditional on server capabilities
   local set_formatting = function()
-    if client.resolved_capabilities.document_formatting then
+    if client.server_capabilities.document_formatting then
       return { [[<cmd>lua vim.lsp.buf.formatting()<CR>]], 'Format', noremap = true, silent = true }
-    elseif client.resolved_capabilities.document_range_formatting then
+    elseif client.server_capabilities.document_range_formatting then
       return { [[<cmd>lua vim.lsp.buf.formatting()<CR>]], 'Format', noremap = true, silent = true }
     end
   end

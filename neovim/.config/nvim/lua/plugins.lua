@@ -97,6 +97,7 @@ return packer.startup(function(use)
   use {
     'neovim/nvim-lspconfig',
     'williamboman/nvim-lsp-installer',
+    'j-hui/fidget.nvim'
   }
 
   -- Git support
@@ -112,8 +113,10 @@ return packer.startup(function(use)
   use 'jeetsukumaran/vim-filebeagle'
 
   -- File picker
-  use { 'camspiers/snap', rocks = { 'fzy' } }
-
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
   -- Completion
   use {
     'hrsh7th/cmp-nvim-lsp',
@@ -136,12 +139,7 @@ return packer.startup(function(use)
   use "folke/trouble.nvim"
 
   -- Enable GitGutter like signs
-  use {
-    'lewis6991/gitsigns.nvim',
-    requires = { 'nvim-lua/plenary.nvim' },
-
-    tag = 'release'
-  }
+  use 'lewis6991/gitsigns.nvim'
 
   -- DBA UI
   use {

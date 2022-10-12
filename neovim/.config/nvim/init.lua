@@ -33,6 +33,7 @@ require("config.nvim-lsp-kind")
 require("config.nvim-lsp-installer")
 require("config.snippets")
 require("config.copilot")
+require("config.fidget")
 
 -- Useful keymaps
 require('maps')

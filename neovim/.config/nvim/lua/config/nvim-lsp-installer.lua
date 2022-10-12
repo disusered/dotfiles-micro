@@ -152,7 +152,7 @@ local enhance_server_opts = {
     opts.on_attach = function(client, bufnr)
       -- neovim's LSP client does not currently support dynamic capabilities registration, so we need to set
       -- the resolved capabilities of the eslint server ourselves!
-      client.resolved_capabilities.document_formatting = true
+      client.server_capabilities.document_formatting = true
       on_attach(client, bufnr)
     end
 
