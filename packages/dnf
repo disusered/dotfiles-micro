@@ -60,8 +60,7 @@ pack
 httpd-tools
 calc
 kubectl
-google-cloud-cli
 google-cloud-sdk
 google-cloud-sdk-terraform-validator
 google-cloud-sdk-pubsub-emulator
-google-cloud-cli-gke-gcloud-auth-plugin
+google-cloud-sdk-gke-gcloud-auth-plugin
