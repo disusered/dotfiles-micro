@@ -48,6 +48,7 @@ function exports.grep(args)
   return vimgrep { prompt = "Grep", filter = args } ()
 end
 
-vim.cmd("command! -nargs=* Grep :lua require('telescope.builtin').live_grep(<f-args>)")
+vim.cmd("command! Grep :lua require('telescope.builtin').live_grep()")
+vim.cmd("command! -nargs=* Grep :lua require('telescope.builtin').grep_string(vim.tbl_extend('force', {}, { search = <f-args> }))")
 
 return exports
