@@ -104,7 +104,8 @@ local enhance_server_opts = {
       eslint = { command = "eslint", args = { "--fix", "--stdin-filename", "%filepath" } },
       prettier = { command = "prettier", args = { "--stdin-filepath", "%filepath" } },
       prettierts = { command = "prettier", args = { "--parser", "typescript", "--stdin-filepath", "%filepath" } },
-      prettierphp = { command = "prettier", args = { "--plugin",  "@prettier/plugin-php", "--parser", "php", "--phpVersion", "7.4", "--tab-width", "2", "--stdin-filepath", "%filepath" } }
+      prettierphp = { command = "prettier", args = { "--plugin",  "@prettier/plugin-php", "--parser", "php", "--phpVersion", "7.4", "--tab-width", "2", "--stdin-filepath", "%filepath" } },
+      terraformfmt = { command = "terraform", args = { "fmt", "--stdin-filepath", "%filepath" } }
     }
 
     local filetypes = {
@@ -116,7 +117,8 @@ local enhance_server_opts = {
       javascriptreact = "prettier",
       typescript = "prettier",
       typescriptreact = "prettier",
-      php = "prettierphp"
+      php = "prettierphp",
+      terraform = "terraformfmt",
     }
 
     opts.filetypes = vim.tbl_keys(filetypes)
