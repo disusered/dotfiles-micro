@@ -23,10 +23,10 @@ local attach_keymaps = function(client, bufnr)
 
   -- Set format keybinds conditional on server capabilities
   local set_formatting = function()
-    if client.server_capabilities.document_formatting then
-      return { [[<cmd>lua vim.lsp.buf.formatting()<CR>]], 'Format', noremap = true, silent = true }
-    elseif client.server_capabilities.document_range_formatting then
-      return { [[<cmd>lua vim.lsp.buf.formatting()<CR>]], 'Format', noremap = true, silent = true }
+    if client.server_capabilities.documentFormattingProvider  then
+      return { [[<cmd>lua vim.lsp.buf.format({ async = true })<CR>]], 'Format', noremap = true, silent = true }
+    elseif client.server_capabilities.documentRangeFormattingProvider then
+      return { [[<cmd>lua vim.lsp.buf.format({ async = true }})<CR>]], 'Format', noremap = true, silent = true }
     end
   end
 

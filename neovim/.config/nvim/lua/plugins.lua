@@ -95,8 +95,9 @@ return packer.startup(function(use)
 
   -- LSP
   use {
-    'neovim/nvim-lspconfig',
-    'williamboman/nvim-lsp-installer',
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
     'j-hui/fidget.nvim'
   }
 
