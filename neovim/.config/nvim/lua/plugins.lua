@@ -93,12 +93,33 @@ return packer.startup(function(use)
   -- Adds Unix file manipulation :Commands
   use 'tpope/vim-eunuch'
 
-  -- LSP
+  -- Mason (installer for LSP, linter, formatter, etc)
   use {
     "williamboman/mason.nvim",
+    config = function() require("config.mason") end,
+  }
+
+  -- Mason integration with Neovim LSP
+  use {
     "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
-    'j-hui/fidget.nvim'
+    requires = { "neovim/nvim-lspconfig" },
+    config = function() require("config.mason-lspconfig") end,
+    after = "mason.nvim",
+  }
+
+  -- Indicators for nvim-lspconfig
+  use {
+    "j-hui/fidget.nvim",
+    config = function() require"fidget".setup{} end,
+    after = "nvim-lspconfig",
+  }
+
+  -- Mason integration with null-ls
+  use {
+    "jayp0521/mason-null-ls.nvim",
+    requires = { "jose-elias-alvarez/null-ls.nvim" },
+    config = function() require("config.mason-null-ls") end,
+    after = "mason.nvim",
   }
 
   -- Git support
