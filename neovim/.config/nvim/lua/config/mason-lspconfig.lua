@@ -10,7 +10,6 @@ require("mason-lspconfig").setup({
     "tailwindcss",
     "tsserver",
     "vimls",
-    "vuels",
     "yamlls",
     "jedi_language_server",
     "pyright",
@@ -18,6 +17,7 @@ require("mason-lspconfig").setup({
     "intelephense",
     "phpactor",
     "svelte",
+    "volar",
   },
   automatic_installation = true,
 })
@@ -69,51 +69,5 @@ require("mason-lspconfig").setup_handlers({
       },
     }
     require'lspconfig'.sumneko_lua.setup(opts)
-  end,
-
-  -- Overrides for VueLS
-  ["vuels"] = function()
-    opts.cmd = { "vls" }
-    opts.filetypes = { "vue" }
-    opts.init_options = {
-      config = {
-        -- Vetur options
-        vetur = {
-          -- Enable hover/definition/references in Vue interpolations
-          -- WARNING: Requires JSDoc or TS annotations
-          experimental = {
-            templateInterpolationService = false
-          },
-          completion = {
-            -- Include completion for module export and auto import them
-            autoImport = true,
-            -- Casing conversion for tag completion
-            tagCasing = "kebab",
-            -- Where Vetur sources scaffold snippets
-            useScaffoldSnippets = true
-          },
-          -- Enable underline `.value` when using composition API.
-          underline = {
-            refValue = true
-          },
-          format = {
-            -- Disable built-in document formatter
-            enable = false,
-          },
-          -- Which built-in diagnostics to enable or disable. Disabling will
-          -- fallback to ESLint, which is generally what we want in a project
-          -- https://vuejs.github.io/vetur/guide/linting-error.html#linting
-          validation = {
-            template = true,
-            script = true,
-            style = true,
-            templateProps = true,
-            interpolation = true
-          }
-        }
-      }
-    }
-
-    require'lspconfig'.vuels.setup(opts)
   end,
 })
