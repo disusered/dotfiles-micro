@@ -60,7 +60,12 @@ pack
 httpd-tools
 calc
 kubectl
+helm
 google-cloud-sdk
 google-cloud-sdk-terraform-validator
 google-cloud-sdk-pubsub-emulator
 google-cloud-sdk-gke-gcloud-auth-plugin
+elixir
+erlang
+inotify-tools
+google-cloud-sdk-skaffold
