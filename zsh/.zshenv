@@ -38,3 +38,7 @@ export VOLTA_HOME="$HOME/.volta"
 
 # Cargo for Rust
 . "$HOME/.cargo/env"
+
+# FlyCTL for Fly.io
+export FLYCTL_INSTALL="$HOME/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
