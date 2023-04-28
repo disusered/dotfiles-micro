@@ -18,6 +18,8 @@ require("mason-lspconfig").setup({
     "phpactor",
     "svelte",
     "volar",
+    "terraformls",
+    "tflint",
   },
   automatic_installation = true,
 })
