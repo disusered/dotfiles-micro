@@ -9,6 +9,7 @@ require 'nvim-treesitter.configs'.setup {
     'dockerfile',
     'eex',
     'elixir',
+    'heex',
     'go',
     'graphql',
     'hcl',
@@ -57,7 +58,7 @@ require 'nvim-treesitter.configs'.setup {
   -- https://github.com/andymass/vim-matchup
   matchup = {
     enable = true, -- mandatory, false will disable the whole extension
-    disable = {},  -- optional, list of language that will be disabled
+    disable = {}, -- optional, list of language that will be disabled
   },
 
   -- Enable AutoTag
