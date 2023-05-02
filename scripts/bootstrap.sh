@@ -27,4 +27,14 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 
   # Symlink configs with stow
   source $ROOT/symlinks.sh
+
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  # Install Homebrew if brew doesn't exist
+  if ! command -v brew &> /dev/null; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  fi
+
+  # Install Homebrew bundle
+  cd $HOME/.dotfiles/packages
+  brew bundle
 fi

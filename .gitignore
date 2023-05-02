@@ -1,3 +1,4 @@
 bins/bin/*
 tmux-client-*
 neovim/.config/nvim/plugin/
+Brewfile.lock.json

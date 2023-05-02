@@ -1,0 +1,16 @@
+# Tap into more sources
+tap 'homebrew/cask-versions'
+tap 'homebrew/cask-fonts'
+
+# CLI Applications ----------------------------------------------------------------------
+
+brew 'ag'			# Search in file
+brew 'git'			# Git
+brew 'git-flow'			# Git Flow
+brew 'git-lfs'			# Git LFS
+brew 'neovim', args: ['HEAD']	# Neovim
+brew 'stow'			# Stow for symlinking configs
+brew 'lua'			# Lua
+brew 'luarocks'			# Luarocks
+brew 'gpg'			# GPG for signing commits
+brew 'zsh'			# ZSH
