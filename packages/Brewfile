@@ -6,8 +6,9 @@ tap 'hashicorp/tap'
 # CLI Applications ----------------------------------------------------------------------
 
 brew 'ag'                         # Search in file
-brew 'telnet'                     # Tool for debugging network connections
 brew 'ripgrep'                    # Another search in file
+brew 'fd'                         # Simple and fast alternative to find
+brew 'telnet'                     # Tool for debugging network connections
 brew 'git'                        # Git
 brew 'git-flow'                   # Git Flow
 brew 'git-lfs'                    # Git LFS
