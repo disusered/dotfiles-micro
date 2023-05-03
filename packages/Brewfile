@@ -1,29 +1,33 @@
 # Tap into more sources
 tap 'homebrew/cask-versions'
 tap 'homebrew/cask-fonts'
+tap 'hashicorp/tap'
 
 # CLI Applications ----------------------------------------------------------------------
 
-brew 'ag'                       # Search in file
-brew 'telnet'                   # Tool for debugging network connections
-brew 'ripgrep'                  # Another search in file
-brew 'git'                      # Git
-brew 'git-flow'                 # Git Flow
-brew 'git-lfs'                  # Git LFS
-brew 'neovim', args: ['HEAD']   # Neovim
-brew 'stow'                     # Stow for symlinking configs
-brew 'lua'                      # Lua
-brew 'luarocks'                 # Luarocks
-brew 'gnupg'                    # GPG for signing commits
-brew 'pinentry-mac'             # GPG pin entry
-brew 'zsh'                      # ZSH
-brew 'pure'                     # Prompt for ZSH
-brew 'stow'                     # Symlink configs
-brew 'volta'                    # NodeJS version manager
-brew 'python3'                  # Python
-brew 'fzf'                      # Fuzzy finder
-brew 'tmux'                     # Virtual screens
-brew 'wget'                     # Download files
-brew 'node'                     # NodeJS for Neovim
-brew 'gh'                       # Github CLI
-cask 'docker'                   # Docker for Mac
+brew 'ag'                         # Search in file
+brew 'telnet'                     # Tool for debugging network connections
+brew 'ripgrep'                    # Another search in file
+brew 'git'                        # Git
+brew 'git-flow'                   # Git Flow
+brew 'git-lfs'                    # Git LFS
+brew 'neovim', args: ['HEAD']     # Neovim
+brew 'stow'                       # Stow for symlinking configs
+brew 'lua'                        # Lua
+brew 'luarocks'                   # Luarocks
+brew 'gnupg'                      # GPG for signing commits
+brew 'pinentry-mac'               # GPG pin entry
+brew 'zsh'                        # ZSH
+brew 'pure'                       # Prompt for ZSH
+brew 'stow'                       # Symlink configs
+brew 'volta'                      # NodeJS version manager
+brew 'python3'                    # Python
+brew 'fzf'                        # Fuzzy finder
+brew 'tmux'                       # Virtual screens
+brew 'wget'                       # Download files
+brew 'node'                       # NodeJS for Neovim
+brew 'gh'                         # Github CLI
+cask 'docker'                     # Docker for Mac
+cask 'virtualbox'                 # Virtualbox
+brew 'vagrant'                    # Vagrant
+brew 'terraform'                  # Terraform
