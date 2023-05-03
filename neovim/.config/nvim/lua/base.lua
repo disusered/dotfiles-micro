@@ -5,9 +5,12 @@ else
   vim.g.python_host_prog = '/usr/bin/python3'
 end
 
--- Set Node host from Volta
--- https://github.com/volta-cli/volta/issues/866#issuecomment-729742828
-vim.g.node_host_prog = os.execute('volta which neovim-node-host | tr -d "\n"')
+-- Set Node host
+if vim.fn.has('macunix') then
+  vim.g.python_host_prog = '/usr/local/bin/neovim-node-host'
+else
+  vim.g.node_host_prog = os.execute('volta which neovim-node-host | tr -d "\n"')
+end
 
 -- Use system clipboard as default depending on platform
 vim.opt.clipboard = 'unnamedplus'
