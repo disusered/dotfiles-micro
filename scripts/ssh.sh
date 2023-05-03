@@ -6,12 +6,14 @@
 
 EMAIL="crosquillas@gmail.com"
 
-log "Starting SSH service"
-sudo systemctl enable sshd.service --now
-systemctl status sshd.service --lines 0
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  log "Starting SSH service"
+  sudo systemctl enable sshd.service --now
+  systemctl status sshd.service --lines 0
+fi
 
 if [ ! -f ~/.ssh/id_ed25519 ]; then
-  echo "Creating SSH key with ed25519 algorithm"
+  log "Creating SSH key with ed25519 algorithm"
   ssh-keygen -t ed25519 -C "$EMAIL" -N "" -C "GitHub Key" -f ~/.ssh/id_ed25519
 
   log "Setting permissions on SSH directory"
@@ -30,8 +32,10 @@ else
   log "authorized_keys file already exists"
 fi
 
+# TODO: Only if not already added
+log "Adding SSH key to SSH Agent"
+FINGERPRINT=$(ssh-keygen -lf ~/.ssh/id_ed25519 | awk '{ print $2 }')
+ssh-add -l | grep -q $FINGERPRINT || ssh-add ~/.ssh/id_ed25519
+
 log "Starting SSH Agent"
 eval "$(ssh-agent -s)"
-
-log "Adding SSH key to SSH Agent"
-ssh-add ~/.ssh/id_ed25519

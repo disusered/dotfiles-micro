@@ -1,17 +1,20 @@
 # Initialize zinit/zplugin
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 source "${ZINIT_HOME}/zinit.zsh"
 
 # Load custom functions
 source $HOME/.config/zsh/zshfuns
 
+# theme
+# https://github.com/sindresorhus/pure
+zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
+zinit light sindresorhus/pure
+
 # plugins
 zplugin light zsh-users/zsh-history-substring-search
 zplugin light zdharma/fast-syntax-highlighting
-
-# theme
-# https://github.com/sindresorhus/pure
-zplugin ice pick"async.zsh" src"pure.zsh"
-zplugin light sindresorhus/pure
 
 # History options
 SAVEHIST=10000
@@ -69,8 +72,19 @@ zinit wait lucid atload"zicompinit; zicdreplay" blockf for \
 autoload -Uz compinit
 compinit
 
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
 autoload -U +X bashcompinit
 bashcompinit
 
 # Enable profiling
 # zprof
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust

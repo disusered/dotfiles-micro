@@ -11,9 +11,11 @@ else
 fi
 
 # Install Python dependencies for Neovim
+log "Updating Python dependencies"
 case $(uname) in
   'Darwin')
-    # TODO
+    python3 -m pip install --upgrade setuptools pip virtualenv
+    python3 -m pip install --user --upgrade pynvim pipx
     ;;
   'Linux')
     sudo pip3 install --upgrade setuptools pip virtualenv
@@ -23,10 +25,17 @@ esac
 
 
 # Neovim dependencies
-pipx install pipenv
-pipx install neovim-remote
-pipx install virtualenv
-pipx install virtualenvwrapper
-pipx install hererocks
-volta install neovim tree-sitter prettier prettier-eslint eslint eslintd
+PYTHON_BIN=$(python3 -c 'import site; print(site.USER_BASE)')/bin
+$PYTHON_BIN/pipx install pipenv
+$PYTHON_BIN/pipx install neovim-remote
+$PYTHON_BIN/pipx install virtualenv
+$PYTHON_BIN/pipx install virtualenvwrapper
+$PYTHON_BIN/pipx install hererocks
+
+# TODO: Fix on Linux
+log "Updating Node dependencies"
+LOCAL_NPM=/usr/local/bin/npm
+$LOCAL_NPM install -g neovim tree-sitter prettier prettier-eslint eslint
+
+log "Updating Rust dependencies"
 cargo install tree-sitter-cli

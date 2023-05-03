@@ -1,7 +1,20 @@
 #!/bin/sh
 
-# Set default shell to zsh
-sudo chsh -s $(which zsh)
+# Set default shell for user to zsh
+# TODO: Fix for Linux
+DEFAULT_SHELL=$(dscl . -read /Users/$USER UserShell | awk '{print $2}')
+
+if [[ $DEFAULT_SHELL != "/usr/local/bin/zsh" ]]; then
+  if [[ $(command -v zsh) ]]; then
+    sudo chpass -s /usr/local/bin/zsh $USER
+    log "ZSH set as default shell for $USER"
+  else
+    log "ZSH is not installed. Please install ZSH and try again."
+    exit 1
+  fi
+else
+  log "ZSH is already the default shell for $USER"
+fi
 
 # Create directory for temporary files if it doesn't exist
 if [[ ! -d "$TMPDIR" ]]; then
@@ -11,15 +24,6 @@ fi
 TMPPREFIX="${TMPDIR%/}/zsh"
 if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
-fi
-
-# Download and install zinit
-# https://github.com/zdharma-continuum/zinit
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-if [[ ! -d "$ZINIT_HOME" ]]; then
-  log "Downloading zinit to $ZINIT_HOME":w
-  mkdir -p "$(dirname $ZINIT_HOME)"
-  git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
 # Create local completions directory if it doesn't exist

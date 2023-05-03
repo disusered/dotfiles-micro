@@ -39,6 +39,11 @@ export VOLTA_HOME="$HOME/.volta"
 # Cargo for Rust
 . "$HOME/.cargo/env"
 
+# LuaRocks fix
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  export MACOSX_DEPLOYMENT_TARGET=$(sw_vers | grep ProductVersion | awk '{print $2}')
+fi
+
 # FlyCTL for Fly.io
 export FLYCTL_INSTALL="$HOME/.fly"
-export PATH="$FLYCTL_INSTALL/bin:$PATH"
+#export PATH="$FLYCTL_INSTALL/bin:$PATH" # TODO: Fix

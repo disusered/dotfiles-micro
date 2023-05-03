@@ -1,11 +1,16 @@
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # Add to $PATH variable
   path=(
+    $VOLTA_HOME/bin
+    "${XDG_DATA_HOME:-${HOME}/.local}/bin"
+    $(python3 -c 'import site; print(site.USER_BASE)')/bin
+    $HOME/.local/bin
     $path
   )
 
   # Add to ZSH function paths
   fpath=(
+    "${XDG_DATA_HOME:-${HOME}/.local/share}/zsh/completions"
     $fpath
   )
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
