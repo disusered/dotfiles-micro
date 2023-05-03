@@ -30,6 +30,7 @@ require("mason-lspconfig").setup({
     "tsserver",
     "svelte",
     "volar",
+    "vuels",
 
     -- YAML
     "yamlls",
