@@ -1,24 +1,49 @@
 -- Setup integration with LSP
 require("mason-lspconfig").setup({
   ensure_installed = {
-    "bashls",
-    "cssls",
-    "dockerls",
-    "html",
-    "jsonls",
-    -- "elixir-ls",
-    -- "lua-language-server",
-    "tailwindcss",
-    "tsserver",
+    -- VimL
     "vimls",
-    "yamlls",
-    "jedi_language_server",
-    "pyright",
-    "psalm",
-    "intelephense",
-    "phpactor",
+
+    -- Bash
+    "bashls",
+
+    -- CSS
+    "cssls",
+    "tailwindcss",
+
+    -- Docker
+    "dockerls",
+
+    -- HTML
+    "html",
+
+    -- JSON
+    "jsonls",
+
+    -- Elixir
+    "elixirls",
+
+    -- Lua
+    "lua_ls",
+
+    -- JavaScript/TypeScript
+    "tsserver",
     "svelte",
     "volar",
+
+    -- YAML
+    "yamlls",
+
+    -- Python
+    "jedi_language_server",
+    "pyright",
+
+    -- PHP
+    -- "psalm",
+    -- "intelephense",
+    -- "phpactor",
+
+    -- Terraform
     "terraformls",
     "tflint",
   },
