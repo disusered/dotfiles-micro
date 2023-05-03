@@ -5,6 +5,7 @@ tap 'homebrew/cask-fonts'
 # CLI Applications ----------------------------------------------------------------------
 
 brew 'ag'                       # Search in file
+brew 'telnet'                   # Tool for debugging network connections
 brew 'ripgrep'                  # Another search in file
 brew 'git'                      # Git
 brew 'git-flow'                 # Git Flow
@@ -25,3 +26,4 @@ brew 'tmux'                     # Virtual screens
 brew 'wget'                     # Download files
 brew 'node'                     # NodeJS for Neovim
 brew 'gh'                       # Github CLI
+cask 'docker'                   # Docker for Mac

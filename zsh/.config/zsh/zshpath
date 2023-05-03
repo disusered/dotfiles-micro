@@ -5,6 +5,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     "${XDG_DATA_HOME:-${HOME}/.local}/bin"
     $(python3 -c 'import site; print(site.USER_BASE)')/bin
     $HOME/.local/bin
+    $HOME/.docker/bin
     $path
   )
 
