@@ -154,7 +154,7 @@ return packer.startup(function(use)
 
   -- File picker
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    'nvim-telescope/telescope.nvim', tag = '0.1.x',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
   -- Completion
