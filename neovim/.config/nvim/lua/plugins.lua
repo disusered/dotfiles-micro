@@ -13,7 +13,6 @@ require 'packer.luarocks'.setup_paths(util.join_paths(vim.fn.stdpath('cache'), '
 require 'packer.luarocks'.install_commands()
 
 return packer.startup(function(use)
-
   -----------------------------------------------------------------------------
   -- Meta
   -----------------------------------------------------------------------------
@@ -124,6 +123,22 @@ return packer.startup(function(use)
     config = function() require("config.mason-null-ls") end,
     after = "mason.nvim",
   }
+
+  -- LSP navigation
+  use({
+    "utilyre/barbecue.nvim",
+    tag = "*",
+    requires = {
+      "SmiteshP/nvim-navic",
+      "nvim-tree/nvim-web-devicons",
+    },
+    after = "nvim-web-devicons",
+    config = function()
+      require("barbecue").setup({
+        theme = "tokyonight",
+      })
+    end,
+  })
 
   -- Git support
   use 'tpope/vim-fugitive'
