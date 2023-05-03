@@ -14,6 +14,3 @@ require("null-ls").setup({
       -- Anything not supported by mason.
   }
 })
-
--- Initialize the integration with null-ls
-require 'mason-null-ls'.setup_handlers()

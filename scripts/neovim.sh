@@ -35,7 +35,7 @@ $PYTHON_BIN/pipx install hererocks
 # TODO: Fix on Linux
 log "Updating Node dependencies"
 LOCAL_NPM=/usr/local/bin/npm
-$LOCAL_NPM install -g neovim tree-sitter prettier prettier-eslint eslint
+$LOCAL_NPM install -g neovim tree-sitter prettier prettier-eslint eslint eslint_d @fsouza/prettierd
 
 log "Updating Rust dependencies"
 cargo install tree-sitter-cli
