@@ -22,12 +22,13 @@ local attach_keymaps = function(client, bufnr)
   buf_set_keymap('n', ']g', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
 
   -- Set format keybinds conditional on server capabilities
+  -- TODO: Account for NullLS
   local set_formatting = function()
-    if client.server_capabilities.documentFormattingProvider  then
+    -- if client.server_capabilities.documentFormattingProvider  then
       return { [[<cmd>lua vim.lsp.buf.format({ async = true })<CR>]], 'Format', noremap = true, silent = true }
-    elseif client.server_capabilities.documentRangeFormattingProvider then
-      return { [[<cmd>lua vim.lsp.buf.format({ async = true }})<CR>]], 'Format', noremap = true, silent = true }
-    end
+    -- elseif client.server_capabilities.documentRangeFormattingProvider then
+    --   return { [[<cmd>lua vim.lsp.buf.format({ async = true }})<CR>]], 'Format', noremap = true, silent = true }
+    -- end
   end
 
   -- Normal mode
