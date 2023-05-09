@@ -136,6 +136,7 @@ return packer.startup(function(use)
     config = function()
       require("barbecue").setup({
         theme = "tokyonight",
+        attach_navic = false, -- prevent barbecue from automatically attaching nvim-navic
       })
     end,
   })

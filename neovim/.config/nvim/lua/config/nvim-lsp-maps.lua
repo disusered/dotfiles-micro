@@ -49,6 +49,8 @@ local attach_keymaps = function(client, bufnr)
       a = { [[<cmd>lua vim.lsp.buf.code_action()<CR>]], 'Code action', noremap = true, silent = true },
       -- Show line diagnostics
       g = { [[<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>]], 'Line diagnostics', noremap = true, silent = true },
+      -- Hide LSP context bar
+      b = { require("barbecue.ui").toggle, 'Toggle winbar', noremap = true, silent = true},
       -- Format buffer
       p = set_formatting(),
     }

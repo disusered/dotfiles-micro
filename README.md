@@ -37,23 +37,6 @@
 
 ## TODO
 
-- [x] Configure LSPs
-  - [x] "bashls",
-  - [x] "cssls",
-  - [x] "diagnosticls",
-  - [x] "dockerls",
-  - [x] "html",
-  - [x] "jsonls",
-  - [x] "sumneko_lua",
-  - [x] "tailwindcss",
-  - [x] "tsserver",
-  - [x] "vimls",
-  - [x] "vuels",
-  - [x] "yamlls",
-- [x] Configure snippets
-- [x] Neovim dependencies in `neovim.sh`
-- [x] kitty paste in `linux.conf`
-- [x] vimtex neovim checkhealth
 - [ ] Darwin everything
 
 ## Sources

@@ -58,6 +58,11 @@ local default_on_attach = function(client, bufnr)
 
   -- Attach LSP signature plugin and config
   require 'config.nvim-lsp-signature' ()
+
+  -- Attach LSP context plugin
+  if client.server_capabilities["documentSymbolProvider"] then
+    require("nvim-navic").attach(client, bufnr)
+  end
 end
 
 -- The default capabilities sent to the server
