@@ -71,6 +71,5 @@ require 'nvim-treesitter.configs'.setup {
   -- https://github.com/JoosepAlviste/nvim-ts-context-commentstring#kommentary
   context_commentstring = {
     enable = true,
-    enable_autocmd = false,
   }
 }

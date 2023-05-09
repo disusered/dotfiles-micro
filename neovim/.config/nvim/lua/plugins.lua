@@ -58,10 +58,16 @@ return packer.startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
 
   -- TreeSitter integration
-  use { 'nvim-treesitter/nvim-treesitter' }
+  use { 'nvim-treesitter/nvim-treesitter', requires = { 'JoosepAlviste/nvim-ts-context-commentstring' } }
 
   -- Allow commenting current line, visual selection or motion
-  use { 'JoosepAlviste/nvim-ts-context-commentstring', requires = { 'b3nj5m1n/kommentary' } }
+  use { 'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup({
+        pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
+      })
+    end
+  }
 
   -- EasyMotion-like movement
   -- use 'justinmk/vim-sneak'
