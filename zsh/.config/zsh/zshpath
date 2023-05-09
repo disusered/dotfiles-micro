@@ -6,6 +6,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     $(python3 -c 'import site; print(site.USER_BASE)')/bin
     $HOME/.local/bin
     $HOME/.docker/bin
+    /usr/local/opt/libpq/bin
     $path
   )
 

@@ -27,8 +27,11 @@ brew 'fzf'                        # Fuzzy finder
 brew 'tmux'                       # Virtual screens
 brew 'wget'                       # Download files
 brew 'node'                       # NodeJS for Neovim
+brew 'elixir'                     # Elixir and Erlang
 brew 'gh'                         # Github CLI
 cask 'docker'                     # Docker for Mac
 cask 'virtualbox'                 # Virtualbox
 brew 'vagrant'                    # Vagrant
 brew 'terraform'                  # Terraform
+brew 'ranger'                     # File manager
+brew 'libpq'                      # Postgres CLI
