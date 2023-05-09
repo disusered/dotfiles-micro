@@ -80,12 +80,12 @@ require("mason-lspconfig").setup_handlers({
   -- The first entry (without a key) will be the default handler
   -- and will be called for each installed server that doesn't have
   -- a dedicated handler.
-  function (server_name)
+  function(server_name)
     require("lspconfig")[server_name].setup(opts)
   end,
 
   -- Overrides for Lua server
-  ["sumneko_lua"] = function ()
+  ["lua_ls"] = function()
     opts.settings = {
       Lua = {
         diagnostics = {
@@ -95,6 +95,8 @@ require("mason-lspconfig").setup_handlers({
         workspace = {
           -- Make the server aware of Neovim runtime files
           library = vim.api.nvim_get_runtime_file("", true),
+          -- https://github.com/neovim/nvim-lspconfig/issues/1700#issuecomment-1033127328
+          checkThirdParty = false,
         },
         -- Do not send telemetry data containing a randomized but unique identifier
         telemetry = {
@@ -102,6 +104,6 @@ require("mason-lspconfig").setup_handlers({
         },
       },
     }
-    require'lspconfig'.sumneko_lua.setup(opts)
+    require 'lspconfig'.lua_ls.setup(opts)
   end,
 })
