@@ -47,6 +47,9 @@ require("mason-lspconfig").setup({
     -- Terraform
     "terraformls",
     "tflint",
+
+    -- C/C++
+    "clangd",
   },
   automatic_installation = true,
 })
