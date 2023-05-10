@@ -4,6 +4,9 @@ require 'nvim-treesitter.configs'.setup {
   -- https://github.com/nvim-treesitter/nvim-treesitter/issues/2293#issuecomment-1094250553
   ensure_installed = {
     'bash',
+    'c',
+    'cpp',
+    'cmake',
     -- 'comment',
     'css',
     'dockerfile',
