@@ -81,7 +81,7 @@ return packer.startup(function(use)
   -----------------------------------------------------------------------------
 
   -- Elixir syntax
-  use 'elixir-editors/vim-elixir'
+  --use 'elixir-editors/vim-elixir'
 
   -- Terraform syntax
   use 'hashivim/vim-terraform'
