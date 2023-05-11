@@ -89,24 +89,8 @@ require("mason-lspconfig").setup_handlers({
 
   -- Overrides for Lua server
   ["lua_ls"] = function()
-    opts.settings = {
-      Lua = {
-        diagnostics = {
-          -- Get the language server to recognize the `vim` global
-          globals = { 'vim' },
-        },
-        workspace = {
-          -- Make the server aware of Neovim runtime files
-          library = vim.api.nvim_get_runtime_file("", true),
-          -- https://github.com/neovim/nvim-lspconfig/issues/1700#issuecomment-1033127328
-          checkThirdParty = false,
-        },
-        -- Do not send telemetry data containing a randomized but unique identifier
-        telemetry = {
-          enable = false,
-        },
-      },
-    }
+    local luals_opts = require "config.lsp-luals"
+    opts = vim.tbl_deep_extend("force", luals_opts, opts)
     require 'lspconfig'.lua_ls.setup(opts)
   end,
 })
