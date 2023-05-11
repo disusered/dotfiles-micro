@@ -93,4 +93,11 @@ require("mason-lspconfig").setup_handlers({
     opts = vim.tbl_deep_extend("force", luals_opts, opts)
     require 'lspconfig'.lua_ls.setup(opts)
   end,
+
+  -- Overides for Tailwind
+  ["tailwindcss"] = function()
+    local tailwindcss_opts = require "config.lsp-tailwindcss"
+    opts = vim.tbl_deep_extend("force", tailwindcss_opts, opts)
+    require 'lspconfig'.tailwindcss.setup(opts)
+  end,
 })
