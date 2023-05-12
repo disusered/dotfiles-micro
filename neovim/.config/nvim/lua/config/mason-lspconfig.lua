@@ -100,4 +100,10 @@ require("mason-lspconfig").setup_handlers({
     opts = vim.tbl_deep_extend("force", tailwindcss_opts, opts)
     require 'lspconfig'.tailwindcss.setup(opts)
   end,
+
+  -- Overrides for clangd
+  ["clangd"] = function()
+    opts.capabilities.offsetEncoding = "utf-8"
+    require 'lspconfig'.clangd.setup(opts)
+  end,
 })
