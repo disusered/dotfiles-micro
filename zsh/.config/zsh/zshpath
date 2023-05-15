@@ -7,6 +7,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     $HOME/.local/bin
     $HOME/.docker/bin
     /usr/local/opt/libpq/bin
+    $FLYCTL_INSTALL/bin
     $path
   )
 
