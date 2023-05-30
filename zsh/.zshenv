@@ -46,3 +46,7 @@ fi
 
 # FlyCTL for Fly.io
 export FLYCTL_INSTALL="$HOME/.fly"
+
+# GPG
+GPG_TTY=$(tty)
+export GPG_TTY
