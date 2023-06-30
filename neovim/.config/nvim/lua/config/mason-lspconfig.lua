@@ -31,6 +31,7 @@ require("mason-lspconfig").setup({
     "svelte",
     "volar",
     "vuels",
+    "denols",
 
     -- YAML
     "yamlls",
@@ -85,6 +86,18 @@ require("mason-lspconfig").setup_handlers({
   -- a dedicated handler.
   function(server_name)
     require("lspconfig")[server_name].setup(opts)
+  end,
+  -- Deno/TSServer
+  ["denols"] = function()
+    local denols_opts = require "config.lsp-denols"
+    opts = vim.tbl_deep_extend("force", denols_opts, opts)
+    require 'lspconfig'.denols.setup(opts)
+  end,
+
+  ["tsserver"] = function()
+    local tsserver_opts = require "config.lsp-denols"
+    opts = vim.tbl_deep_extend("force", tsserver_opts, opts)
+    require 'lspconfig'.denols.setup(opts)
   end,
 
   -- Overrides for Lua server

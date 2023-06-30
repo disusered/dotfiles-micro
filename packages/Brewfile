@@ -27,6 +27,7 @@ brew 'fzf'                        # Fuzzy finder
 brew 'tmux'                       # Virtual screens
 brew 'wget'                       # Download files
 brew 'node'                       # NodeJS for Neovim
+brew 'deno'                       # Deno
 brew 'elixir'                     # Elixir and Erlang
 brew 'gh'                         # Github CLI
 cask 'docker'                     # Docker for Mac
