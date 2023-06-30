@@ -12,6 +12,7 @@ brew 'telnet'                     # Tool for debugging network connections
 brew 'git'                        # Git
 brew 'git-flow'                   # Git Flow
 brew 'git-lfs'                    # Git LFS
+brew 'git-delta'                  # Git Delta (diffs)
 brew 'neovim', args: ['HEAD']     # Neovim
 brew 'stow'                       # Stow for symlinking configs
 brew 'lua'                        # Lua
