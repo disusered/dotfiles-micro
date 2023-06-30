@@ -29,7 +29,7 @@ require 'nvim-treesitter.configs'.setup {
     'make',
     'php',
     'phpdoc',
-    'python',
+    -- 'python',
     -- 'regex',
     'ruby',
     'rust',

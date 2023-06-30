@@ -5,6 +5,7 @@ require("mason-null-ls").setup({
   ensure_installed = {
     "prettierd",
     "eslint_d",
+    "black",
   },
   automatic_installation = true,
   automatic_setup = true,
@@ -18,6 +19,9 @@ null_ls.setup({
     }),
     null_ls.builtins.formatting.eslint_d.with({
       extra_filetypes = { "vue" },
-    })
+    }),
+    null_ls.builtins.formatting.black.with({
+      extra_filetypes = { "python" },
+    }),
   }
 })
